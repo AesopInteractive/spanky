@@ -2,45 +2,7 @@
 
 global $post;
 
-$author_id = get_the_author_meta('ID');
-$author_name = get_the_author_meta('display_name');
-$author_img = get_avatar($author_id,50,'', $author_name); 
-
-?>
-
-<!-- Aside -->
-<aside class="spanky-content-left">
-	<div class="spanky-brand-block">
-
-		<a class="spanky-site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://placekitten.com/140/60"></a>
-
-	</div>
-	<div class="spanky-meta-block">
-		<?php echo the_title('<h2 class="spanky-entry-title">','</h2>');?>
-
-		<div class="spanky-meta-block-author">
-			<?php echo $author_img;?>
-			<span class="spanky-posted-by">posted by</span>
-			<span class="spanky-author-name"><?php echo $author_name;?></span>
-		</div>
-
-	</div>
-	<?php if (is_singular() && has_shortcode($post->post_content,'aesop_chapter')){?>
-	<div class="aesop-entry-header">
-		<h6 class="spanky-sb-heading">Chapter</h6>
-	</div>
-	<?php } ?>
-	<?php if (is_singular() && has_shortcode($post->post_content,'aesop_timeline_stop')){?>
-		<h6 class="spanky-sb-heading">Timeline</h6>
-		<?php do_action('aesop_inside_body_top');?>
-	<?php } ?>
-
-	<?php if(is_active_sidebar('spanky_sb')) { ?>
-	<div class="spanky-sb">
-		<?php dynamic_sidebar('spanky_sb'); ?>
-	</div>
-	<?php } ?>
-</aside>
+get_template_part('content','sidebar');?>
 
 <!-- Story Entry -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('spanky-content-right spanky-entry-content aesop-entry-content clearfix'); ?>>
