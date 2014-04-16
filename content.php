@@ -4,10 +4,15 @@ global $post;
 
 ?>
 
-
+<!-- Aside -->
 <aside class="spanky-content-left">
+	<div class="spanky-brand-block">
+
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="spanky-site-logo" src="http://placekitten.com/120/40"></a>
+
+	</div>
 	<div class="spanky-author-block">
-		<?php echo the_title();?>
+		<?php echo the_title('<h2 class="spanky-entry-title">','</h2>');?>
 	</div>
 	<?php if (has_shortcode($post->post_content,'aesop_chapter')){?>
 	<div class="aesop-entry-header">
@@ -15,11 +20,11 @@ global $post;
 	</div>
 	<?php } ?>
 	<?php if (has_shortcode($post->post_content,'aesop_timeline_stop')){?>
-
 		<h6 class="spanky-sb-heading">Timeline</h6>
 		<?php do_action('aesop_inside_body_top');?>
 	<?php } ?>
 </aside>
+
 <!-- Story Entry -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('spanky-content-right spanky-entry-content aesop-entry-content clearfix'); ?>>
 	<?php the_content(); ?>
