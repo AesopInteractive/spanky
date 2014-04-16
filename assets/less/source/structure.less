@@ -2,13 +2,9 @@
 	width:100%;
 	min-height: @header-height;
 	background:@dark;
-	position: relative;
+	position: fixed;
+    z-index: 120;
     padding-left:@sb-width;
-
-    &.visible {
-        position: fixed;
-        top:0;
-    }
 }
 .spanky-content-left {
 	width:@sb-width;
@@ -16,6 +12,7 @@
 	top:0;
 	bottom:0;
 	position: fixed;
+    z-index: 121; //clears header
 	background:lighten(@dark,10);
 }
 .spanky-content-right {

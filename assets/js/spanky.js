@@ -19,14 +19,4 @@ jQuery(document).ready(function(){
 	// stacked gallery stuffs
 	jQuery('.aesop-stacked-img').css({'height':(jQuery(window).height())+'px', 'width':(jQuery(window).width())+'px'});
 
-		// when the top of the article hits 35% from teh top of the screen fade out story cover meta
-	jQuery('.spanky-content-right').waypoint(function(direction) {
-	   jQuery('.spanky-header-toggle').toggleClass('visible');
-	});
-
-	jQuery('.spanky-header-toggle').click(function(e){
-		e.preventDefault();
-		jQuery('.spanky-header').toggleClass('visible');
-		jQuery('.spanky-entry-content').toggleClass('spanky-top-space');
-	});
 });

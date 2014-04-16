@@ -9,7 +9,7 @@ global $post;
 	<div class="spanky-brand-block">
 
 		<a class="spanky-site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://placekitten.com/140/60"></a>
-		<a class="spanky-header-toggle" href="#">Menu</a>
+
 	</div>
 	<div class="spanky-meta-block">
 		<?php echo the_title('<h2 class="spanky-entry-title">','</h2>');?>
