@@ -14,8 +14,10 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-		<?php do_action('aesop_inside_body_top');?>
+	
 
-		<header>
-			link 
-		</header>
+	<header>
+
+		<?php wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'spanky-nav-menu unstyled','container_id' => 'spanky-primary-nav', 'container' => false ) ); ?>
+
+	</header>

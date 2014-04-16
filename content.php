@@ -1,7 +1,25 @@
+<?php 
+
+global $post;
+
+?>
+
+
 <aside class="spanky-content-left">
 	<div class="spanky-author-block">
 		
 	</div>
+	<?php if (has_shortcode($post->post_content,'aesop_chapter')){?>
+	<div class="aesop-entry-header">
+		<h6 class="spanky-sb-heading">Chapter</h6>
+	</div>
+	<?php } ?>
+	<?php if (has_shortcode($post->post_content,'aesop_timeline_stop')){?>
+	<div class="aesop-timeline">
+		<h6 class="spanky-sb-heading">Timeline</h6>
+		<?php do_action('aesop_inside_body_top');?>
+	</div>
+	<?php } ?>
 </aside>
 <!-- Story Entry -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('spanky-content-right spanky-entry-content aesop-entry-content clearfix'); ?>>
