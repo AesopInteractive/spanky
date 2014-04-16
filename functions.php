@@ -45,6 +45,14 @@ class spankyFunctions {
 			);
 		}
 
+		register_sidebars(1, array(
+			'name' 			=> __('Spanky Sidebar', 'spanky'),
+			'id' 			=> 'spanky_sb',
+	      	'before_title' 	=> '<h6 class="spanky-sb-heading">',
+	      	'after_title' 	=> '</h6>',
+			'before_widget' => '<div class="spanky-widget">',
+			'after_widget' 	=> '</div>'
+	    ));
 	}
 
 }

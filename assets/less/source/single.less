@@ -5,13 +5,47 @@
 
 .spanky-meta-block {
     background:@brand-warning;
-    height:250px;
+    padding:2rem 1rem;
 
     .spanky-entry-title {
         margin:0;
+        padding-bottom:4rem;
+        font-size:2.6rem;
         text-align: center;
-        padding-top:1.4rem;
-        font-size:3rem;
+        text-shadow:0 1px 0 rgba(255,255,255,0.3);
+    }
+
+    .spanky-meta-block-author {
+        position: relative;
+        bottom:0;
+        .clearfix();
+
+        .avatar {
+            float:left;
+            padding:0.3rem;
+            border-radius:50%;
+            background: darken(@brand-warning,3);
+            border:1px solid darken(@brand-warning,8);
+            .box-shadow(0 1px 1px -1px rgba(255,255,255,1.0));
+        }
+        span {
+            display: block;
+            padding-left:1rem;
+            overflow: hidden;
+            font-family: @font-family-sans-serif;
+            text-shadow:0 1px 0 rgba(255,255,255,0.3);
+        }
+        .spanky-posted-by {
+            padding-top:0.4rem;
+            font-size: @font-size-small - 3;
+            line-height: @font-size-small;
+            font-style: italic;
+        }
+        .spanky-author-name {
+            font-weight:bold;
+            font-size: @font-size-small + 2;
+            line-height: @font-size-small + 2;
+        }
     }
 }
 
