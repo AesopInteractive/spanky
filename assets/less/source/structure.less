@@ -1,9 +1,14 @@
-header {
+.spanky-header {
 	width:100%;
 	min-height: @header-height;
 	background:@dark;
-	z-index: 99;
 	position: relative;
+    padding-left:@sb-width;
+
+    &.visible {
+        position: fixed;
+        top:0;
+    }
 }
 .spanky-content-left {
 	width:@sb-width;
@@ -26,5 +31,9 @@ header {
     	max-width:800px;
     	margin-left:auto;
     	margin-right:auto;
+    }
+
+    &.spanky-top-space {
+        margin-top:@header-height;
     }
 }

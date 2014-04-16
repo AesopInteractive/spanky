@@ -8,18 +8,22 @@ global $post;
 <aside class="spanky-content-left">
 	<div class="spanky-brand-block">
 
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="spanky-site-logo" src="http://placekitten.com/120/40"></a>
+		<a class="spanky-site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://placekitten.com/140/60"></a>
+		<a class="spanky-header-toggle" href="#">Menu</a>
+	</div>
+	<div class="spanky-meta-block">
+		<?php echo the_title('<h2 class="spanky-entry-title">','</h2>');?>
+
+		<img class="" src="http://placekitten.com/60/60">
+		<span>Name</span>
 
 	</div>
-	<div class="spanky-author-block">
-		<?php echo the_title('<h2 class="spanky-entry-title">','</h2>');?>
-	</div>
-	<?php if (has_shortcode($post->post_content,'aesop_chapter')){?>
+	<?php if (is_singular() && has_shortcode($post->post_content,'aesop_chapter')){?>
 	<div class="aesop-entry-header">
 		<h6 class="spanky-sb-heading">Chapter</h6>
 	</div>
 	<?php } ?>
-	<?php if (has_shortcode($post->post_content,'aesop_timeline_stop')){?>
+	<?php if (is_singular() && has_shortcode($post->post_content,'aesop_timeline_stop')){?>
 		<h6 class="spanky-sb-heading">Timeline</h6>
 		<?php do_action('aesop_inside_body_top');?>
 	<?php } ?>
