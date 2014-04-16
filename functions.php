@@ -45,9 +45,20 @@ class spankyFunctions {
 			);
 		}
 
+		// front page sidebar
 		register_sidebars(1, array(
-			'name' 			=> __('Spanky Sidebar', 'spanky'),
+			'name' 			=> __('Spanky Front Page Sidebar', 'spanky'),
 			'id' 			=> 'spanky_sb',
+	      	'before_title' 	=> '<h6 class="spanky-sb-heading">',
+	      	'after_title' 	=> '</h6>',
+			'before_widget' => '<div class="spanky-widget">',
+			'after_widget' 	=> '</div>'
+	    ));
+
+		// Single sidebar
+	    register_sidebars(1, array(
+			'name' 			=> __('Spanky Single Sidebar', 'spanky'),
+			'id' 			=> 'spanky_single_sb',
 	      	'before_title' 	=> '<h6 class="spanky-sb-heading">',
 	      	'after_title' 	=> '</h6>',
 			'before_widget' => '<div class="spanky-widget">',

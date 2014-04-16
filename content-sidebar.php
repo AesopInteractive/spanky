@@ -19,9 +19,15 @@
 		<?php do_action('aesop_inside_body_top');?>
 	<?php } ?>
 
-	<?php if(is_active_sidebar('spanky_sb')) { ?>
+	<?php if( is_home() && is_active_sidebar('spanky_sb') ) { ?>
 	<div class="spanky-sb">
 		<?php dynamic_sidebar('spanky_sb'); ?>
+	</div>
+	<?php } ?>
+
+	<?php if( is_single() && is_active_sidebar('spanky_single_sb') ) { ?>
+	<div class="spanky-sb">
+		<?php dynamic_sidebar('spanky_single_sb'); ?>
 	</div>
 	<?php } ?>
 </aside>
