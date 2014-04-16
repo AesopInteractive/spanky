@@ -7,7 +7,7 @@ global $post;
 
 <aside class="spanky-content-left">
 	<div class="spanky-author-block">
-		
+		<?php echo the_title();?>
 	</div>
 	<?php if (has_shortcode($post->post_content,'aesop_chapter')){?>
 	<div class="aesop-entry-header">
@@ -15,10 +15,9 @@ global $post;
 	</div>
 	<?php } ?>
 	<?php if (has_shortcode($post->post_content,'aesop_timeline_stop')){?>
-	<div class="aesop-timeline">
+
 		<h6 class="spanky-sb-heading">Timeline</h6>
 		<?php do_action('aesop_inside_body_top');?>
-	</div>
 	<?php } ?>
 </aside>
 <!-- Story Entry -->

@@ -9,5 +9,33 @@
     color:@gray-lighter;
     font-weight: normal;
     font-family: @font-family-sans-serif;
-    padding:1.2rem 0.8rem;
+    padding:1.2rem 1rem;
+}
+
+.aesop-timeline {
+    padding:1rem;
+
+    ol {
+        list-style: none;
+        margin:0;
+        padding:0;
+        border-left:1px solid lighten(@dark,15);
+
+        li {
+            position: relative;
+            padding-left:2rem;
+            margin-bottom:1.2rem;
+
+            &:before {
+                content:'';
+                background:@gray;
+                height:9px;
+                width:9px;
+                border-radius:50%;
+                position:absolute;
+                left:-5px;
+                top:10px;
+            }
+        }
+    }
 }
