@@ -1,3 +1,43 @@
+//leafleft maps fi
+.leaflet-top.leaflet-left {
+    z-index: 0;
+}
+
+.aesop-component-invisible{
+    .opacity(0);
+}
+.aesop-component-visible {
+    .opacity(1.0);
+    .transition(opacity .25s linear);
+}
+
+//chapter wrap
+
+.aesop-article-chapter-wrap {
+    width: 100%;
+    position: relative;
+    top:0;
+
+    // base inner cover
+    .aesop-article-chapter{
+        position: relative;
+        background-size: 100%; //iphone fix
+        background-size: cover; 
+        height:800px;
+    }
+
+
+    // cover posted by and cover title
+    .aesop-cover-title {
+        color:white;
+        width:90%;
+        left:10%;
+        bottom:10%;
+        position: absolute;
+        z-index: 1;// clear the mask if set
+    }
+
+}
 // timeline
 .aesop-timeline {
     padding-left:1.6rem;
@@ -34,6 +74,36 @@
 
             a {
                 .spanky-alt-text;
+                color:@gray-light;
+            }
+        }
+    }
+}
+
+.aesop-entry-header nav {
+    padding-left:1.6rem;
+    padding-right:1.6rem;
+    ol {
+        padding-left:2.5rem;
+        list-style: initial;
+        list-style-type: upper-roman;
+        color:@gray;
+        .spanky-alt-text;
+
+        li {
+            position: relative;
+            margin-bottom:0.2rem;
+
+            &:first-child {
+                padding-top:0.6rem;
+
+                &:before {
+                    top:18px;
+                }
+            }
+
+            a {
+
                 color:@gray-light;
             }
         }
