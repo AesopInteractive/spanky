@@ -21,7 +21,7 @@ get_header();
 
 					<article class="spanky-indexpost-item">
 
-						<?php echo the_post_thumbnail('spanky-index-cover', array('class' => 'spanky-indexpost-img'));?>
+						<?php echo the_post_thumbnail('spanky-index-cover', array('class' => 'spanky-indexpost-img spanky-img'));?>
 
 						<div class="spanky-indexpost-item-inner">
 							<p class="spanky-indexpost-meta"><?php _e('Written by','spanky');?> <?php echo get_the_author();?></p>

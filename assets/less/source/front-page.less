@@ -6,23 +6,30 @@
 
     .spanky-width;
     border-top:1px solid @gray;
-    margin-top:3rem;
-    padding-top:3rem;
+    margin-top:5rem;
+    padding-top:6rem;
 
     &:first-child {
+        padding-top:0;
         border-top:none;
     }
 
+    &:last-child {
+        margin-bottom:5rem;
+    }
+
     .spanky-indexpost-img {
-        margin-bottom:1rem;
+        margin-bottom:2rem;
     }
 
     .spanky-indexpost-item-inner {
+
         .spanky-indexpost-meta {
-            margin:0 auto 1rem;
+            margin:0;
+            .spanky-alt-text;
         }
         .spanky-indexpost-entry-title {
-            margin:0 auto 0.4rem;
+            margin:0 auto 1.2rem;
             a {
                 color:inherit;
             }
@@ -30,11 +37,12 @@
         }
 
         .spanky-indexpost-item-excerpt {
-      
+            margin-bottom: 0.2rem;
         }
 
         .spanky-indexpost-readmore {
-
+            margin-bottom: 0;
+            .spanky-alt-text;
         }
 
     }
