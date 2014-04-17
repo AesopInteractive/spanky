@@ -6,12 +6,16 @@
 
 get_header();
 
+$getreadmore = sprintf('..&nbsp;&nbsp;<a class="spanky-indexpost-readmore" href="<?php the_permalink();?>"><span>%s</span></a>', __('[read more]','spanky'));
+$readmore = apply_filters('spanky_read_more', $getreadmore);
+
 ?><main class="clearfix">
 
 	<?php get_template_part('content','sidebar');?>
 
 	<!-- Story Loop -->
 	<div class="spanky-content-right spanky-front-listing">
+		<div class="spanky-collection-grid">
 		<?php
 			if ( have_posts() ) :
 
@@ -27,8 +31,8 @@ get_header();
 							<p class="spanky-indexpost-meta"><?php apply_filters('spanky_meta_text', _e('Written by','spanky')); ?> <?php echo get_the_author();?></p>
 							<h2 class="spanky-indexpost-entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 							
-							<div class="spanky-indexpost-item-excerpt"><?php echo wp_trim_words(get_the_excerpt(),22,'...');?></div>
-							<a class="spanky-indexpost-readmore" href="<?php the_permalink();?>"><span><?php apply_filters('spanky_readmore_text', _e('Read More','spanky')); ?></span>&nbsp;<i class="spankycon spankycon-angle-right"></i></a>
+							<div class="spanky-indexpost-item-excerpt"><?php echo wp_trim_words(get_the_excerpt(),32,$readmore);?></div>
+							
 						</div>
 
 					</article>
@@ -43,6 +47,7 @@ get_header();
 
 			endif;
 			?>
+		</div>
 	</div>
 </main>
 

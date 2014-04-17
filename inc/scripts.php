@@ -4,6 +4,7 @@ class spankyScriptLoader {
 
 	public function __construct(){
 
+		add_action('template_redirect', array($this,'load_posts'));
 		add_action('wp_enqueue_scripts', array($this,'load_scripts'));
 
 	}
@@ -14,5 +15,30 @@ class spankyScriptLoader {
 		wp_enqueue_style('spanky-style', get_stylesheet_directory_uri().'/assets/css/style.css', 1.0, true);
 	}
 
+	public function load_posts() {
+
+	 	global $wp_query;
+
+	 	// Add code to index pages.
+	 	if ( is_home() || is_archive() ) {
+	 		// Queue JS and CSS
+	 		wp_enqueue_script('jorgen-post-loader',SPANKY_THEME_URL.'/assets/js/load-posts.js',array('jquery'),SPANKY_THEME_VERSION,true);
+
+	 		// What page are we on? And what is the pages limit?
+	 		$max = $wp_query->max_num_pages;
+	 		$paged = ( get_query_var('paged') > 1 ) ? get_query_var('paged') : 1;
+
+	 		// Add some parameters for the JS.
+	 		wp_localize_script(
+	 			'jorgen-post-loader',
+	 			'pbd_alp',
+	 			array(
+	 				'startPage' => $paged,
+	 				'maxPages' => $max,
+	 				'nextLink' => next_posts($max, false)
+	 			)
+	 		);
+	 	}
+	 }
 }
 new spankyScriptLoader;

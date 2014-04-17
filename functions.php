@@ -22,7 +22,7 @@ class spankyFunctions {
 
 		// set theme width
 		if ( ! isset( $content_width ) ) {
-			$width = get_theme_mod('jorgen_width', 800);
+			$width = get_theme_mod('jorgen_width', 780);
 			$content_width = $width;
 
 		}

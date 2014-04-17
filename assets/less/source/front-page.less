@@ -24,25 +24,33 @@
 
     .spanky-indexpost-item-inner {
 
-        .spanky-indexpost-meta {
-            margin:0;
+        .spanky-indexpost-meta,
+        .spanky-indexpost-readmore {
+            color:lighten(@text-color,15);
             .spanky-alt-text;
         }
+
+        .spanky-indexpost-meta {
+            margin:0;
+        }
         .spanky-indexpost-entry-title {
-            margin:0 auto 1.2rem;
+            margin:0 auto 1rem;
             a {
                 color:inherit;
             }
-
         }
 
         .spanky-indexpost-item-excerpt {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.8rem;
         }
 
         .spanky-indexpost-readmore {
             margin-bottom: 0;
-            .spanky-alt-text;
+
+            &:hover {
+                color:@link-color;
+            }
+
         }
 
     }
