@@ -31,6 +31,8 @@ class spankyFunctions {
 		// Enable support for Post Thumbnails, and declare two sizes.
 		add_theme_support( 'post-thumbnails' );
 
+		add_image_size('spanky-index-cover', 800, 300, true);
+
 
 		// Switch default core markup for search form, comment form, and comments
 		add_theme_support( 'html5', array(

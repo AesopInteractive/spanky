@@ -17,17 +17,20 @@ get_header();
 
 				while ( have_posts() ) : the_post();
 
-					$coverimg 		= wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID() ), 'spanky-index-cover' );
 					?>
 
 					<article class="spanky-indexpost-item">
+
+						<?php echo the_post_thumbnail('spanky-index-cover', array('class' => 'spanky-indexpost-img'));?>
+
 						<div class="spanky-indexpost-item-inner">
-							<?php the_title('<h2 class="spanky-indexpost-entry-title">','</h2>');?>
 							<p class="spanky-indexpost-meta"><?php _e('Written by','spanky');?> <?php echo get_the_author();?></p>
+							<h2 class="spanky-indexpost-entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+							
 							<div class="spanky-indexpost-item-excerpt"><?php echo wp_trim_words(get_the_excerpt(),22,'...');?></div>
 							<a class="spanky-indexpost-readmore" href="<?php the_permalink();?>"><span>Read More</span>&nbsp;<i class="spankycon spankycon-angle-right"></i></a>
 						</div>
-						<div class="spanky-indexpost-item-img" style="background-image:url(<?php echo $coverimg[0];?>);background-repeat:no-repeat;background-size:cover;"></div>
+
 					</article>
 
 					<?php
