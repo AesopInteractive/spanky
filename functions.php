@@ -12,6 +12,8 @@ class spankyFunctions {
 
 		// Includes
 		require_once(SPANKY_THEME_DIR.'/inc/scripts.php' );
+		require_once(SPANKY_THEME_DIR.'/inc/meta.php' );
+
 		add_action('after_setup_theme', array($this,'setup'));
 		add_filter('aesop_chapter_scroll_offset', array($this,'aesop_chapter_scroll_offset'));
 		add_filter('aesop_timeline_scroll_offset', array($this,'aesop_timeline_scroll_offset'));
