@@ -1,0 +1,43 @@
+//pagination
+.spanky-page-links{
+    padding:0;
+    width:100%;
+    max-width:@site-width;
+    margin:2rem auto;
+    .clearfix;
+
+    span,
+    .page-numbers {
+        display: inline-block;
+        vertical-align: top;
+        padding:4px 12px;
+        margin: 0;
+        font-size: @font-size-small;
+        font-family: @font-family-sans-serif;
+        color:@text-color;
+        background: @baseContrast;
+
+        &.current,
+        &:hover {
+            background: @link-color;
+            text-decoration: none;
+        }
+
+        &:first-child {
+            margin-left:0;
+        }
+
+        &:last-child {
+            margin-right:0;
+        }
+
+        &.next {
+
+        }
+    }
+
+    .spanky-page-links-title {
+        background: none;
+    }
+
+}
