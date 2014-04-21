@@ -1,11 +1,10 @@
-<?php
-
-	$highlights = get_post_meta(get_the_ID(),'spanky_story_highlights', false);
-
-?>
+<?php do_action('ase_sb_before'); //action ?>
 
 <!-- Aside -->
 <aside class="spanky-content-left">
+
+	<?php do_action('ase_sb_inside_top'); //action ?>
+
 	<div class="spanky-brand-block">
 
 		<a class="spanky-site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://placekitten.com/140/60"></a>
@@ -17,18 +16,6 @@
 
 
 	if (is_singular()){
-
-		if(is_single() && $highlights){
-
-			echo '<div class="spanky-story-higlights">';
-			echo '<h6 class="spanky-sb-heading">Story Highlights</h6>';
-			echo '<ul>';
-				foreach($highlights as $highlight){
-					echo '<li>'.$highlight.'</li>';
-				}
-			echo '</ul>';
-			echo '</div>';
-		}
 
 		if(has_shortcode($post->post_content,'aesop_chapter')){ ?>
 			<div class="aesop-entry-header">
@@ -50,12 +37,15 @@
 
 	}
 
-
 	if( is_home() && is_active_sidebar('spanky_sb') ) { ?>
 	<div class="spanky-sb">
 		<?php dynamic_sidebar('spanky_sb'); ?>
 	</div>
 	<?php } ?>
 
+	<?php do_action('ase_sb_inside_bottom'); //action ?>
 
 </aside>
+
+
+<?php do_action('ase_sb_after'); //action ?>
