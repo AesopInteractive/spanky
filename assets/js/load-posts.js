@@ -16,8 +16,8 @@ jQuery(document).ready(function($) {
 	if(pageNum <= max) {
 		// Insert the "More Posts" link.
 		$('.spanky-front-listing')
-			.append('<div class="spanky-collection-grid clearfix spanky-collection-grid-'+ pageNum +'"></div>')
-			.append('<p class="spanky-load-more-posts fix"><a href="#">Load More Stories</a></p>');
+			.append('<div class="spanky-index-listing clearfix spanky-index-listing-'+ pageNum +'"></div>')
+			.append('<p class="spanky-load-more-posts fix"><a class="btn btn-warning" href="#">Load More Stories</a></p>');
 
 	}
 
@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 			// Show that we're working.
 			$(this).text('Loading stories...');
 
-			$('.spanky-collection-grid-'+ pageNum).load(nextLink + ' .spanky-indexpost-item',
+			$('.spanky-index-listing-'+ pageNum).load(nextLink + ' .spanky-indexpost-item',
 				function() {
 					// Update page number and nextLink.
 					pageNum++;
@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 
 					// Add a new placeholder, for when user clicks again.
 					$('.spanky-load-more-posts')
-						.before('<div class="spanky-collection-grid clearfix spanky-collection-grid-'+ pageNum +'"></div>')
+						.before('<div class="spanky-index-listing clearfix spanky-index-listing-'+ pageNum +'"></div>')
 
 					// Update the button message.
 					if(pageNum <= max) {

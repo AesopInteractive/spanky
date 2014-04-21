@@ -10,7 +10,7 @@ $readmore = apply_filters('spanky_read_more', $getreadmore);
 
 	<!-- Story Loop -->
 	<div class="spanky-content-right spanky-front-listing">
-		<div class="spanky-collection-grid">
+		<div class="spanky-index-listing">
 		<?php
 			if ( have_posts() ) :
 

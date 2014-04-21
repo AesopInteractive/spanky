@@ -2,12 +2,23 @@
     padding-top:@header-height;
 }
 
+.spanky-index-listing {
+    .spanky-indexpost-item {
+        border-top:1px solid @gray;
+        padding-top:6rem;
+    }
+}
+[class*="spanky-index-listing-"] {
+
+    .spanky-indexpost-item:first-child {
+        border-top:1px solid @gray;
+        padding-top:6rem;
+    }
+}
 .spanky-indexpost-item {
 
     .spanky-width;
-    border-top:1px solid @gray;
     margin-top:5rem;
-    padding-top:6rem;
 
     &:first-child {
         padding-top:0;
@@ -61,4 +72,5 @@
 }
 .spanky-load-more-posts  {
     .spanky-width;
+    margin-bottom:7rem;
 }
