@@ -10,6 +10,12 @@ $readmore = apply_filters('spanky_read_more', $getreadmore);
 
 	<!-- Story Loop -->
 	<div class="spanky-content-right spanky-front-listing">
+
+
+		<?php if (is_archive()){
+			get_template_part('partials/currently-viewing');
+		}?>
+
 		<div class="spanky-index-listing">
 		<?php
 			if ( have_posts() ) :
