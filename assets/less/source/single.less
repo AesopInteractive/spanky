@@ -57,3 +57,63 @@
     font-family: @font-family-sans-serif;
     padding:1.2rem 1rem;
 }
+
+.spanky-post-meta {
+    color:@text-color;
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-small;
+    border-top:1px solid @baseContrast;
+    border-bottom:1px solid @baseContrast;
+    padding:0.4rem 0;
+    .clearfix();
+    margin-top:4rem;
+
+    .spanky-cat-links,
+    .spanky-tag-links {
+        position: relative;
+        padding-left:22px;
+        margin:0;
+        line-height: 1;
+        width:48%;
+        float:left;
+
+        span {
+            vertical-align: middle;
+            position: relative;
+            top:1px;
+            color:fadeout(@text-color,25);
+        }
+
+        &:before {
+            font-family: FontAwesome;
+            font-size: @font-size-xsmall;
+            position: absolute;
+            left:0;
+            top:2px;
+        }
+        a {
+            font-family: @font-family-sans-serif;
+            color:inherit;
+            margin-right:4px;
+            font-size: @font-size-xsmall;
+
+            &:hover {
+                color:@link-color;
+            }
+        }
+    }
+    .spanky-cat-links {
+        padding-left:29px;
+        &:before {
+            left:0.6rem;
+            content:'\f0ca';
+        }
+    }
+    .spanky-tag-links {
+        float: right;
+        &:before {
+            left:4px;
+            content:'\f02e';
+        }
+    }
+}
