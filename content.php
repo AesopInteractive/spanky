@@ -15,8 +15,12 @@ get_template_part('content','sidebar');?>
 		'link_after'  => '</span>',
 	) ); ?>
 
-	<footer class="spanky-post-meta">
-		<div class="spanky-cat-links"><?php echo get_the_category_list( _x( '<span>&middot;</span> ', '', 'spanky' ) ); ?></div>
-		<?php echo get_the_tag_list('<div class="spanky-tag-links">','<span>&middot;</span> ','</div>'); ?>
-	</footer>
+	<?php if (is_single()){ ?>
+
+		<footer class="spanky-post-meta">
+			<div class="spanky-cat-links"><?php echo get_the_category_list( _x( '<span>&middot;</span> ', '', 'spanky' ) ); ?></div>
+			<?php echo get_the_tag_list('<div class="spanky-tag-links">','<span>&middot;</span> ','</div>'); ?>
+		</footer>
+	<?php } ?>
+
 </article>

@@ -3,17 +3,13 @@
 <!-- Aside -->
 <aside class="spanky-content-left">
 
-	<?php do_action('ase_sb_inside_top'); //action ?>
+	<?php do_action('ase_sb_inside_top'); //action
 
-	<div class="spanky-brand-block">
-
-		<a class="spanky-site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="http://placekitten.com/140/60"></a>
-
-	</div>
-	<?php if(is_single()){
+	get_template_part('partials/brand-block');
+	
+	if(is_single()){
 		get_template_part('partials/meta-block');
 	}
-
 
 	if (is_singular()){
 
