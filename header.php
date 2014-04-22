@@ -15,6 +15,8 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+	<a class="spanky-menu-toggle" href="#">Menu</a>
+
 	<header id="spanky-header" class="spanky-header">
 
 		<?php wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'spanky-nav-menu unstyled','container_id' => 'spanky-primary-nav', 'container' => false ) ); ?>

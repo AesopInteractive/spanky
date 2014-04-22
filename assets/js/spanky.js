@@ -3,8 +3,10 @@ jQuery(document).ready(function(){
 		// setup some js variables to use across the board
 	var windowHeight        = jQuery(window).height(),
 		windowWidth			= jQuery(window).width(),
+		body 				= jQuery('body'),
 		chapterCover 		= jQuery('.aesop-article-chapter'),
-		headerHeight		= jQuery('.spanky-header').height();
+		headerHeight		= jQuery('.spanky-header').height(),
+		menuToggle			= jQuery('.spanky-menu-toggle');
 
 	// In View Animations
 	jQuery('.aesop-image-component, .aesop-audio-component').addClass('aesop-component-invisible');
@@ -28,4 +30,16 @@ jQuery(document).ready(function(){
 	// set the cover to the size of the window
    	coverResizer()
 
+   	animateMenu = function(){
+   		jQuery(body).toggleClass('menu-open');
+   	}
+
+   	// menu toggle
+   	jQuery(menuToggle).click(function(e){
+   		e.preventDefault()
+   		animateMenu()
+   	});
+   	jQuery('main').click(function(){
+   		jQuery(body).removeClass('menu-open');
+   	});
 });
