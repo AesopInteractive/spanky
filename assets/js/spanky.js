@@ -30,14 +30,12 @@ jQuery(document).ready(function(){
 	// set the cover to the size of the window
    	coverResizer()
 
-   	animateMenu = function(){
-   		jQuery(body).toggleClass('menu-open');
-   	}
-
    	// menu toggle
    	jQuery(menuToggle).click(function(e){
    		e.preventDefault()
-   		animateMenu()
+
+   		jQuery(body).toggleClass('menu-open');
+   		   		jQuery('body').toggleClass('cgc-main-nav-open').animate({ scrollTop: 0 }, 400)
    	});
    	jQuery('main').click(function(){
    		jQuery(body).removeClass('menu-open');

@@ -1,23 +1,18 @@
 .spanky-menu-toggle {
     visibility: hidden;
-    position: absolute;
-    top:52px;
-    right:20px;
-    z-index: 140;
-}
-.admin-bar .spanky-menu-toggle{
-    top:20px + @adminbar;
+    position: fixed;
+
 }
 
 @media(max-width:767px) {
     .spanky-menu-toggle {
         visibility: visible;
+        top:20px;
+        right:20px;
+        z-index: 140;
     }
 }
-.admin-bar.menu-open {
 
-    .translate3d( -@floating-menu-width, -@adminbar, 0 );
-}
 .menu-open {
 
     .translate3d( -@floating-menu-width, 0, 0 );
@@ -39,5 +34,15 @@
         li {
             display: block;
         }
+    }
+}
+
+// admin bar fixes
+.admin-bar {
+    .spanky-menu-toggle{
+        top:20px + @adminbar;
+    }
+    &.menu-open {
+        .translate3d( -@floating-menu-width, -@adminbar, 0 );
     }
 }
