@@ -1,7 +1,7 @@
 <?php
 get_header();
 
-$getreadmore = sprintf('..&nbsp;&nbsp;<a class="spanky-indexpost-readmore" href="<?php the_permalink();?>"><span>%s</span></a>', __('[read more]','spanky'));
+$getreadmore = sprintf('..&nbsp;&nbsp;<a class="spanky-indexpost-readmore" href="%s"><span>%s</span></a>', get_permalink(), __('[read more]','spanky'));
 $readmore = apply_filters('spanky_read_more', $getreadmore);
 
 ?><main class="clearfix">

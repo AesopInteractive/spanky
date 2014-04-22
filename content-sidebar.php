@@ -40,6 +40,7 @@
 	<?php } ?>
 
 	<?php do_action('ase_sb_inside_bottom'); //action ?>
+	<?php do_action('ase_addon_social_links'); //action ?>
 
 </aside>
 

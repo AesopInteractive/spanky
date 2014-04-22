@@ -1,16 +1,9 @@
 .spanky-menu-toggle {
     visibility: hidden;
     position: fixed;
-
-}
-
-@media(max-width:767px) {
-    .spanky-menu-toggle {
-        visibility: visible;
-        top:20px;
-        right:20px;
-        z-index: 140;
-    }
+    top:20px;
+    right:20px;
+    z-index: 140;
 }
 
 .menu-open {
@@ -27,11 +20,14 @@
         top:0;
         bottom:0;
         .opacity(1);
+        .box-shadow(inset -8px 0 8px -8px rgba(0,0,0,1.0));
     }
 
     .spanky-nav-menu {
-
+        padding:1rem;
         li {
+            text-align: left;
+            line-height: 1;
             display: block;
         }
     }
