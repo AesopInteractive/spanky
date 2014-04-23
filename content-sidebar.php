@@ -6,7 +6,11 @@
 	<?php do_action('ase_sb_inside_top'); //action
 
 	get_template_part('partials/brand-block');
-	
+
+	if(is_home()){
+		do_action('ase_addon_social_links'); //action
+	}
+
 	if(is_single()){
 		get_template_part('partials/meta-block');
 	}
@@ -40,7 +44,6 @@
 	<?php } ?>
 
 	<?php do_action('ase_sb_inside_bottom'); //action ?>
-	<?php do_action('ase_addon_social_links'); //action ?>
 
 </aside>
 

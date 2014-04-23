@@ -17,6 +17,8 @@ class spankyFunctions {
 		add_action('after_setup_theme', array($this,'setup'));
 		add_filter('aesop_chapter_scroll_offset', array($this,'aesop_chapter_scroll_offset'));
 		add_filter('aesop_timeline_scroll_offset', array($this,'aesop_timeline_scroll_offset'));
+		add_filter('body_class', 		array($this,'body_class'));
+
 
 		add_filter('widget_text', 'do_shortcode');
 		add_filter('aesop_video_component_classes', array($this,'aesop_video_component_classes'));
@@ -92,6 +94,12 @@ class spankyFunctions {
 		function aesop_content_component_classes(){
 
 		return 'brandi';
+	}
+
+	function body_class($classes){
+
+		$classes[] = 'andersen';
+		return $classes;
 	}
 }
 new spankyFunctions;

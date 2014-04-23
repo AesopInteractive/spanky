@@ -23,7 +23,7 @@
     padding-top: 12rem;
     padding-bottom: 8rem;
 
-    p,ul,ol,h1,h2,h3,h4,h5,h6,.spanky-page-links, .spanky-post-meta {
+    p,ul,ol,h1,h2,h3,h4,h5,h6,.spanky-page-links, .spanky-post-meta,.sharedaddy.sd-sharing-enabled {
     	.spanky-width;
     }
 
@@ -61,8 +61,30 @@
 
 // ase socia add on  
 .ase-social-links {
+    background: @brand-warning;
+    padding:2rem 1rem;
+    font-family: @font-family-sans-serif;
+    a {
+        color: lighten(@dark,10);
+
+        &:hover {
+            color:lighten(@dark,25);
+            text-decoration: none;
+        }
+
+        i {
+            position: relative;
+            top:5px;
+        }
+    }
+
     .ase-social-links-message {
-        color:@gray-light;
+        color:lighten(@dark,10);
         font-size: @font-size-small;
     }
+}
+
+// jetpack stuff
+.andersen div.sharedaddy div.sd-block {
+    border-top:1px solid @baseContrast;
 }
