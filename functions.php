@@ -18,8 +18,9 @@ class spankyFunctions {
 		add_filter('aesop_chapter_scroll_offset', array($this,'aesop_chapter_scroll_offset'));
 		add_filter('aesop_timeline_scroll_offset', array($this,'aesop_timeline_scroll_offset'));
 
+		add_filter('widget_text', 'do_shortcode');
 		add_filter('aesop_video_component_classes', array($this,'aesop_video_component_classes'));
-				add_filter('aesop_content_component_classes', array($this,'aesop_content_component_classes'));
+		add_filter('aesop_content_component_classes', array($this,'aesop_content_component_classes'));
 	}
 
 	function setup(){
