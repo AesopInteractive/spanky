@@ -40,15 +40,15 @@ module.exports = function(grunt) {
    		uglify: {
             plugins: {
                 options: {
-                    sourceMap: 'js/jorgen.js.map',
-                    sourceMappingURL: 'jorgen.js.map',
+                    sourceMap: 'js/spanky.js.map',
+                    sourceMappingURL: 'spanky.js.map',
                     sourceMapPrefix: 2
                 },
                	files: {
-                    'js/jorgen.min.js': [
+                    'js/spanky.min.js': [
                     	'js/source/transition.js',
-                    	'js/source/collapse.js',
-                    	'js/source/jorgen.js'
+                     	'js/source/collapse.js',
+                        'js/source/general.js'
                     ]
                 }
             }

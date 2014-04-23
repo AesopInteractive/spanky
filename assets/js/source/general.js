@@ -33,9 +33,8 @@ jQuery(document).ready(function(){
    	// menu toggle
    	jQuery(menuToggle).click(function(e){
    		e.preventDefault()
-
    		jQuery(body).toggleClass('menu-open');
-   		   		jQuery('body').toggleClass('cgc-main-nav-open').animate({ scrollTop: 0 }, 400)
+
    	});
    	jQuery('main').click(function(){
    		jQuery(body).removeClass('menu-open');

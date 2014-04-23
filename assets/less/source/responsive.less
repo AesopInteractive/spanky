@@ -2,13 +2,20 @@
     .spanky-content-right{
 
         padding-left: 295px;
-        padding-right:15px;
+
+        p {
+            padding-right:15px;
+        }
     }
-        .spanky-indexpost-item:first-child {
+    .spanky-indexpost-item:first-child {
         margin-top: 2rem ;
     }
 }
 @media(max-width:767px) {
+    .home .spanky-sb {
+        position: absolute;
+        left:-10000px;
+    }
     .spanky-menu-toggle {
         visibility: visible;
     }
@@ -23,9 +30,26 @@
         position: static;
         bottom: auto;
     }
-    .spanky-content-right,
+    .spanky-footer {
+        padding-left: 0;
+    }
+    .spanky-content-right ,
     .spanky-entry-content {
-        padding:1rem;
+        padding-left: 0;
+        padding-top:1rem;
+
+        p {
+            padding-left:1rem;
+            padding-right: 1rem;
+        }
+    }
+    .spanky-front-listing,
+    .spanky-footer-text {
+        padding-left:1rem;
+        padding-right:1rem;
+    }
+    .spanky-indexpost-item:first-child {
+        margin-top: 0;
     }
     .spanky-brand-block .spanky-site-title {
         z-index: 120;

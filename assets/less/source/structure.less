@@ -21,7 +21,7 @@
 
 .spanky-entry-content {
     padding-top: 12rem;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
 
     p,ul,ol,h1,h2,h3,h4,h5,h6,.spanky-page-links, .spanky-post-meta,.sharedaddy.sd-sharing-enabled {
     	.spanky-width;
@@ -57,6 +57,19 @@
     .spanky-content-left {
         top:32px;
     }
+}
+
+// footer
+.spanky-footer {
+    padding-left:@sb-width;
+}
+.spanky-footer-text {
+    @color: lighten(@text-color, 15);
+    
+    color: @color;
+    .spanky-width;
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-small;
 }
 
 // ase socia add on  
