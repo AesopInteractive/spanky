@@ -1,4 +1,8 @@
-<div class="spanky-brand-block">
+<?php
+
+$ispage = is_page() ? 'is-page' : false;?>
+
+<div class="spanky-brand-block <?php echo $ispage;?>">
 
 	<?php if (get_theme_mod('spanky_site_logo')) { ?>
 

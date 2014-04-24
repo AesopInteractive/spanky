@@ -60,11 +60,6 @@ ol.commentlist li div.reply {  }
 ol.commentlist li div.reply a { 
     font-weight:bold;
     font-size:@font-size-xsmall;
-    color:lighten(@text-color,15);
-
-    &:hover {
-        color:@link-color;
-    }
 }
 ol.commentlist li ul.children { list-style:none; margin:1em 0 0; text-indent:0; .avatar {max-width:50px;}}
 ol.commentlist li ul.children li {}
@@ -103,6 +98,7 @@ ol.commentlist li.comment .comment-body{
     .spanky-alt-text;
 
     #spanky-comments {
+        padding-bottom: 3rem;
         border-bottom:1px solid @baseContrast;
     }
 
@@ -130,14 +126,14 @@ ol.commentlist li.comment .comment-body{
     line-height: 1;
     width:10%;
     float:right;
+    right:12px;
     text-align: right;
     font-size:@font-size-small;
-    color:@text-color;
+    color:fadeout(@text-color,10);
 
     &:hover {
         text-decoration: none;
-        cursor: pointer;
-        color:@link-color;
+        color:lighten(@text-color, 15);
     }
 
     span {

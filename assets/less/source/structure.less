@@ -59,6 +59,33 @@
     }
 }
 
+// single page
+
+.page {
+    .spanky-header {
+        padding-left:0;
+    }
+    .spanky-footer {
+        padding-left:0;
+    }
+
+    &.menu-open {
+        .spanky-header {
+            .spanky-brand-block {
+                display: none;
+            }
+        }
+    }
+}
+.page-template-template-sidebar-php {
+    .spanky-header .spanky-brand-block {
+        width:100%;
+    }
+    .spanky-brand-block.is-page {
+        float: none;
+    }
+}
+
 // footer
 .spanky-footer {
     padding-left:@sb-width;
@@ -133,7 +160,7 @@
 .aesop-story-highlights-shortcode {
     width:300px;
     float:right;
-    border-left:1px solid @baseContrast;
+    border-left:1px solid @baseContrastMore;
     margin:0 2rem 1rem;
     padding-left:1.6rem;
 

@@ -8,7 +8,7 @@
 
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'content', get_post_format() );
+				?><div class="spanky-entry-content"><?php the_content();?></div><?php
 
 			endwhile;
 

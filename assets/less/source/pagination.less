@@ -11,12 +11,13 @@
     .page-numbers {
         display: inline-block;
         vertical-align: top;
-        padding:4px 12px;
+        padding:3px 12px;
         margin: 0;
         font-size: @font-size-small;
         font-family: @font-family-sans-serif;
         color:@text-color;
         background: @baseContrast;
+        border:1px solid @baseContrastMore;
 
         &.current,
         &:hover {
@@ -40,6 +41,7 @@
     .spanky-page-links-title {
         background: none;
         padding-left:0;
+        border:none;
 
         &:hover {
             background: none;

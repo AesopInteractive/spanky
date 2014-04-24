@@ -19,6 +19,10 @@
 
 	<header id="spanky-header" class="spanky-header">
 
-		<?php wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'spanky-nav-menu unstyled','container_id' => 'spanky-primary-nav', 'container' => false ) ); ?>
+		<?php if (is_page() && !is_page_template('template-sidebar.php')){
+			get_template_part('partials/brand-block');
+		}
+
+		wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'spanky-nav-menu unstyled','container_id' => 'spanky-primary-nav', 'container' => false ) ); ?>
 
 	</header>

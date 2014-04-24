@@ -9,6 +9,10 @@
         top:7px;
         font-size:3rem;
     }
+
+    &.is-page {
+        float: left;
+    }
 }
 
 .spanky-meta-block {
@@ -67,12 +71,13 @@
 }
 
 .spanky-post-meta {
-    color:@text-color;
+    color:fadeout(@text-color,10);
     font-family: @font-family-sans-serif;
     font-size: @font-size-small;
-    border-top:1px solid @baseContrast;
-    border-bottom:1px solid @baseContrast;
-    padding:0.4rem 0;
+    padding:0.8rem 0;
+    background: @baseContrast;
+    border-top:1px solid @baseContrastMore;
+    border-bottom: 1px solid @baseContrastMore;
     .clearfix();
 
     .spanky-cat-links,
@@ -105,14 +110,14 @@
             font-size: @font-size-xsmall;
 
             &:hover {
-                color:@link-color;
+                color:lighten(@text-color,10);
             }
         }
     }
     .spanky-cat-links {
-        padding-left:29px;
+        padding-left:33px;
         &:before {
-            left:0.6rem;
+            left:12px;
             content:'\f0ca';
         }
     }
