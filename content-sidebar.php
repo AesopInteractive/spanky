@@ -7,15 +7,15 @@
 
 	get_template_part('partials/brand-block');
 
-	if(is_home()){
+	if( is_home() || is_archive() ){
 		do_action('ase_addon_social_links'); //action
 	}
 
-	if(is_single()){
+	if( is_single() ){
 		get_template_part('partials/meta-block');
 	}
 
-	if (is_singular()){
+	if ( is_singular() ){
 
 		if(has_shortcode($post->post_content,'aesop_chapter')){ ?>
 			<div class="aesop-entry-header">
@@ -37,7 +37,7 @@
 
 	}
 
-	if( is_home() && is_active_sidebar('spanky_sb') ) { ?>
+	if( is_home() || is_archive() && is_active_sidebar('spanky_sb') ) { ?>
 	<div class="spanky-sb">
 		<?php dynamic_sidebar('spanky_sb'); ?>
 	</div>

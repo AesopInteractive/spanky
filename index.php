@@ -1,9 +1,6 @@
 <?php
 get_header();
 
-$getreadmore = sprintf('..&nbsp;&nbsp;<a class="spanky-indexpost-readmore" href="%s"><span>%s</span></a>', get_permalink(), __('[read more]','spanky'));
-$readmore = apply_filters('spanky_read_more', $getreadmore);
-
 ?><main class="clearfix">
 
 	<?php get_template_part('content','sidebar');?>
@@ -34,9 +31,10 @@ $readmore = apply_filters('spanky_read_more', $getreadmore);
 							<?php echo the_post_thumbnail('spanky-index-cover', array('class' => 'spanky-indexpost-img spanky-img'));?>
 
 							<div class="spanky-indexpost-item-inner">
-								<p class="spanky-indexpost-meta"><?php apply_filters('spanky_meta_text', _e('Written by','spanky')); ?> <?php echo get_the_author();?></p>
+								<p class="spanky-indexpost-meta"><?php apply_filters('spanky_meta_text', _e('Written by','spanky')); ?> <span><?php echo get_the_author();?></span></p>
 								<h2 class="spanky-indexpost-entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-								<div class="spanky-indexpost-item-excerpt"><?php echo wp_trim_words(get_the_excerpt(),32,$readmore);?></div>
+								<div class="spanky-indexpost-item-excerpt"><?php echo get_the_excerpt();?></div>
+								<a class="spanky-indexpost-readmore" href="<?php the_permalink();?>"><span><?php echo apply_filters('spanky_read_more', _e('Read more...','spanky'));?></span></a>
 							</div>
 
 						</article>

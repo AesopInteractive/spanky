@@ -3,9 +3,9 @@
 global $wp_query;
 
 if(is_category()) {
-	$category = $wp_query->query_vars['category_name'];
+	$category = sprintf('for <span>%s</span>',$wp_query->query_vars['category_name']);
 } elseif (is_tag()){
-	$category = $wp_query->query['tag'];
+	$category = sprintf('for <span>%s</span>',$wp_query->query['tag']);
 } else {
 	$category = '';
 }
@@ -26,7 +26,7 @@ $results = sprintf('<span class="spanky-search-results">%s</span>',$wp_query->fo
 
 	<?php } else { ?>
 
-		<?php _e('Archives for ','spanky');?> <span><?php echo $category;?></span>
+		<?php _e('Archives  ','spanky');?> <?php echo $category;?>
 
 	<?php } ?>
 
