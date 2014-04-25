@@ -11,6 +11,7 @@ class spankyFunctions {
 		define('SPANKY_THEME_URL', get_template_directory_uri());
 
 		// Includes
+		require_once(SPANKY_THEME_DIR.'/inc/helpers.php' );
 		require_once(SPANKY_THEME_DIR.'/inc/options.php' );
 		require_once(SPANKY_THEME_DIR.'/inc/scripts.php' );
 
