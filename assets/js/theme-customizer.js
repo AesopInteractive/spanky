@@ -6,6 +6,13 @@
  */
 (function($){
 
+	// Update the site title in real time...
+	wp.customize( 'blogname', function( value ) {
+	    value.bind( function( newval ) {
+	        $('.spanky-site-title a').html( newval );
+	    });
+	});
+
 	//Update site background color...
 	wp.customize( 'spanky_background_color', function( value ) {
 	    value.bind( function( newval ) {
@@ -26,6 +33,13 @@
 	    value.bind( function( newval ) {
 	        $('a,a:hover,.spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-readmore, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-entry-title a:hover,.spanky-nav-menu li a:hover,.spanky-nav-menu li a,.spanky-nav-menu li.current-menu-item a, .spanky-post-meta .spanky-cat-links a:hover, .spanky-post-meta .spanky-tag-links a:hover,.spanky-comments-toggle:hover').css('color', newval );
 	   	    $('.btn, .btn:hover, input[type=submit], input[type=reset], input[type=button], input[type=button]:hover,.spanky-meta-block').css('background-color', newval );
+	    });
+	});
+
+	//Update Footer Text
+	wp.customize( 'spanky_footer_text', function( value ) {
+	    value.bind( function( newval ) {
+	        $('.spanky-footer-text').html( newval );
 	    });
 	});
 
