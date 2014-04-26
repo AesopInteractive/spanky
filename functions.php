@@ -1,6 +1,6 @@
 <?php
 
-class spankyFunctions {
+class andersenFunctions {
 
 	function __construct(){
 
@@ -41,7 +41,7 @@ class spankyFunctions {
 		// Enable support for Post Thumbnails, and declare two sizes.
 		add_theme_support( 'post-thumbnails' );
 
-		add_image_size('spanky-index-cover', 800, 300, true);
+		add_image_size('andersen-index-cover', 800, 300, true);
 
 
 		// Switch default core markup for search form, comment form, and comments
@@ -59,21 +59,21 @@ class spankyFunctions {
 
 		// front page sidebar
 		register_sidebars(1, array(
-			'name' 			=> __('Spanky Front Page Sidebar', 'spanky'),
-			'id' 			=> 'spanky_sb',
-	      	'before_title' 	=> '<h6 class="spanky-sb-heading">',
+			'name' 			=> __('Spanky Front Page Sidebar', 'andersen'),
+			'id' 			=> 'andersen_sb',
+	      	'before_title' 	=> '<h6 class="andersen-sb-heading">',
 	      	'after_title' 	=> '</h6>',
-			'before_widget' => '<div class="spanky-widget">',
+			'before_widget' => '<div class="andersen-widget">',
 			'after_widget' 	=> '</div>'
 	    ));
 
 		// Single sidebar
 	    register_sidebars(1, array(
-			'name' 			=> __('Spanky Single Sidebar', 'spanky'),
-			'id' 			=> 'spanky_single_sb',
-	      	'before_title' 	=> '<h6 class="spanky-sb-heading">',
+			'name' 			=> __('Spanky Single Sidebar', 'andersen'),
+			'id' 			=> 'andersen_single_sb',
+	      	'before_title' 	=> '<h6 class="andersen-sb-heading">',
 	      	'after_title' 	=> '</h6>',
-			'before_widget' => '<div class="spanky-widget">',
+			'before_widget' => '<div class="andersen-widget">',
 			'after_widget' 	=> '</div>'
 	    ));
 	}
@@ -103,7 +103,7 @@ class spankyFunctions {
 		return $classes;
 	}
 }
-new spankyFunctions;
+new andersenFunctions;
 
 
 

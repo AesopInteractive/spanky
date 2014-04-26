@@ -8,7 +8,7 @@
 
 			while ( have_posts() ) : the_post();
 
-				?><div class="spanky-entry-content"><?php the_content();?></div><?php
+				?><div class="andersen-entry-content"><?php the_content();?></div><?php
 
 			endwhile;
 

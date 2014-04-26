@@ -6,14 +6,14 @@ get_header();
 	<?php get_template_part('content','sidebar');?>
 
 	<!-- Story Loop -->
-	<div class="spanky-content-right spanky-front-listing">
+	<div class="andersen-content-right andersen-front-listing">
 
 
 		<?php if (is_archive()){
 			get_template_part('partials/currently-viewing');
 		}?>
 
-		<div class="spanky-index-listing">
+		<div class="andersen-index-listing">
 		<?php
 			if ( have_posts() ) :
 
@@ -26,15 +26,15 @@ get_header();
 					} else {
 						?>
 
-						<article class="spanky-indexpost-item">
+						<article class="andersen-indexpost-item">
 
-							<?php echo the_post_thumbnail('spanky-index-cover', array('class' => 'spanky-indexpost-img spanky-img'));?>
+							<?php echo the_post_thumbnail('andersen-index-cover', array('class' => 'andersen-indexpost-img andersen-img'));?>
 
-							<div class="spanky-indexpost-item-inner">
-								<p class="spanky-indexpost-meta"><?php apply_filters('spanky_meta_text', _e('Written by','spanky')); ?> <span><?php echo get_the_author();?></span></p>
-								<h2 class="spanky-indexpost-entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-								<div class="spanky-indexpost-item-excerpt"><?php echo get_the_excerpt();?></div>
-								<a class="spanky-indexpost-readmore" href="<?php the_permalink();?>"><span><?php echo apply_filters('spanky_read_more', _e('Read more...','spanky'));?></span></a>
+							<div class="andersen-indexpost-item-inner">
+								<p class="andersen-indexpost-meta"><?php apply_filters('andersen_meta_text', _e('Written by','andersen')); ?> <span><?php echo get_the_author();?></span></p>
+								<h2 class="andersen-indexpost-entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+								<div class="andersen-indexpost-item-excerpt"><?php echo get_the_excerpt();?></div>
+								<a class="andersen-indexpost-readmore" href="<?php the_permalink();?>"><span><?php echo apply_filters('andersen_read_more', _e('Read more...','andersen'));?></span></a>
 							</div>
 
 						</article>

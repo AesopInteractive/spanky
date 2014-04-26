@@ -6,23 +6,23 @@
 	}
 
 	if ( post_password_required() ) { ?>
-		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.','spanky');?></p>
+		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.','andersen');?></p>
 	<?php
 		return;
 	}
 
 	if (have_comments()) {
-		$commentsClass = 'spanky-post-has-comments';
+		$commentsClass = 'andersen-post-has-comments';
 	} else {
 		$commentsClass = null;
 	}
 ?>
 
 <!-- Comments -->
-<?php do_action('spanky_before_comments');?>
-<div id="spanky-comments-wrap" class="spanky-comments-wrap">
+<?php do_action('andersen_before_comments');?>
+<div id="andersen-comments-wrap" class="andersen-comments-wrap">
 	
-	<div id="spanky-comments" class="collapse <?php echo $commentsClass;?>">
+	<div id="andersen-comments" class="collapse <?php echo $commentsClass;?>">
 
 		 <?php
 
@@ -36,7 +36,7 @@
 
 		  } else {
 
-		  		_e('Be the first to leave a comment!', 'spanky');
+		  		_e('Be the first to leave a comment!', 'andersen');
 
 		  }
 
@@ -48,4 +48,4 @@
 		<?php comment_form(); ?>
 	</div>
 </div>
-<?php do_action('spanky_after_comments');?>
+<?php do_action('andersen_after_comments');?>

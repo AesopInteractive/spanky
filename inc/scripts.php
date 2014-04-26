@@ -1,6 +1,6 @@
 <?php
 
-class spankyScriptLoader {
+class andersenScriptLoader {
 
 	public function __construct(){
 
@@ -11,8 +11,8 @@ class spankyScriptLoader {
 
 	public function load_scripts(){
 
-		wp_enqueue_script('jorgen-script', SPANKY_THEME_URL.'/assets/js/spanky.min.js', array('jquery','ai-core'), SPANKY_THEME_VERSION, true);
-		wp_enqueue_style('spanky-style', get_stylesheet_directory_uri().'/assets/css/style.css', 1.0, true);
+		wp_enqueue_script('jorgen-script', SPANKY_THEME_URL.'/assets/js/andersen.min.js', array('jquery','ai-core'), SPANKY_THEME_VERSION, true);
+		wp_enqueue_style('andersen-style', get_stylesheet_directory_uri().'/assets/css/style.css', 1.0, true);
 	}
 
 	public function load_posts() {
@@ -45,4 +45,4 @@ class spankyScriptLoader {
 		}
 	}
 }
-new spankyScriptLoader;
+new andersenScriptLoader;

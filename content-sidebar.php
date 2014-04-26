@@ -1,7 +1,7 @@
 <?php do_action('ase_theme_sb_before'); //action ?>
 
 <!-- Aside -->
-<aside class="spanky-content-left">
+<aside class="andersen-content-left">
 
 	<?php do_action('ase_theme_sb_inside_top'); //action
 
@@ -19,27 +19,27 @@
 
 		if(has_shortcode($post->post_content,'aesop_chapter')){ ?>
 			<div class="aesop-entry-header">
-				<h6 class="spanky-sb-heading">Chapter</h6>
+				<h6 class="andersen-sb-heading">Chapter</h6>
 			</div>
 		<?php }
 
 		if (has_shortcode($post->post_content,'aesop_timeline_stop')){ ?>
-			<h6 class="spanky-sb-heading">Timeline</h6>
+			<h6 class="andersen-sb-heading">Timeline</h6>
 			<?php do_action('aesop_inside_body_top');
 		}
 
-		if( is_active_sidebar('spanky_single_sb') ) { ?>
-			<div class="spanky-sb">
-				<?php dynamic_sidebar('spanky_single_sb'); ?>
+		if( is_active_sidebar('andersen_single_sb') ) { ?>
+			<div class="andersen-sb">
+				<?php dynamic_sidebar('andersen_single_sb'); ?>
 			</div>
 		<?php }
 
 
 	}
 
-	if( is_home() || is_archive() && is_active_sidebar('spanky_sb') ) { ?>
-	<div class="spanky-sb">
-		<?php dynamic_sidebar('spanky_sb'); ?>
+	if( is_home() || is_archive() && is_active_sidebar('andersen_sb') ) { ?>
+	<div class="andersen-sb">
+		<?php dynamic_sidebar('andersen_sb'); ?>
 	</div>
 	<?php } ?>
 

@@ -10,8 +10,8 @@
   	* @param $key pass a hex color
   	*
 */
-if (!function_exists('spanky_color_sync')){
-	function spanky_color_sync($key = '', $lum = 2){
+if (!function_exists('andersen_color_sync')){
+	function andersen_color_sync($key = '', $lum = 2){
 
 		//break up the color in its RGB components
 		$r = hexdec(substr($key,0,2));
@@ -21,10 +21,10 @@ if (!function_exists('spanky_color_sync')){
 		$yiq = (($r*299)+($g*587)+($b*114))/1000;
 
 		if ($yiq >= 128){
-		    $out = spanky_darken($key, $lum);
+		    $out = andersen_darken($key, $lum);
 		}else{
 		    //dark color, use bright font
-		    $out = spanky_lighten($key, $lum);
+		    $out = andersen_lighten($key, $lum);
 		}
 
 		return $out;
@@ -41,9 +41,9 @@ if (!function_exists('spanky_color_sync')){
   	* @param $key pass a hex color
   	*
 */
-if (!function_exists('spanky_lighten')){
+if (!function_exists('andersen_lighten')){
 
-	function spanky_lighten($key = '',$lum = 2) {
+	function andersen_lighten($key = '',$lum = 2) {
 
 		$col = array(hexdec(substr($key,1,2)),hexdec(substr($key,3,2)),hexdec(substr($key,5,2)));
 
@@ -53,9 +53,9 @@ if (!function_exists('spanky_lighten')){
 		return $lighten;
 	}
 }
-if (!function_exists('spanky_darken')){
+if (!function_exists('andersen_darken')){
 
-	function spanky_darken($key = '',$lum = 2) {
+	function andersen_darken($key = '',$lum = 2) {
 
 		$col = array(hexdec(substr($key,1,2)),hexdec(substr($key,3,2)),hexdec(substr($key,5,2)));
 
@@ -65,34 +65,34 @@ if (!function_exists('spanky_darken')){
 		return $darken;
 	}
 }
-if (!function_exists('spanky_color_invert')){
-	function spanky_color_invert( $mode = 'dark', $delta = 5 ){
+if (!function_exists('andersen_color_invert')){
+	function andersen_color_invert( $mode = 'dark', $delta = 5 ){
 
 		if($mode == 'light'){
 
-			if(spanky_color_detect() == -2)
+			if(andersen_color_detect() == -2)
 				return 2*$delta;
-			elseif(spanky_color_detect() == -1)
+			elseif(andersen_color_detect() == -1)
 				return 1.5*$delta;
-			elseif(spanky_color_detect() == 1)
+			elseif(andersen_color_detect() == 1)
 				return -1.7*$delta;
 			else
 				return $delta;
 
 		}else{
-			if(spanky_color_detect() == -2)
+			if(andersen_color_detect() == -2)
 				return -(2*$delta);
-			elseif(spanky_color_detect() == -1)
+			elseif(andersen_color_detect() == -1)
 				return -$delta;
 			else
 				return $delta;
 		}
 	}
 }
-if (!function_exists('spanky_color_detect')){
-	function spanky_color_detect(){
+if (!function_exists('andersen_color_detect')){
+	function andersen_color_detect(){
 
-		$bgcolor = get_theme_mod('spanky_background_color');
+		$bgcolor = get_theme_mod('andersen_background_color');
 
 		$hex = str_replace('#', '', $bgcolor);
 

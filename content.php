@@ -7,14 +7,14 @@ get_template_part('content','sidebar');
 do_action('ase_theme_post_before'); //action ?>
 
 <!-- Story Entry -->
-<article id="post-<?php the_ID(); ?>" <?php post_class('spanky-content-right spanky-entry-content aesop-entry-content clearfix'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('andersen-content-right andersen-entry-content aesop-entry-content clearfix'); ?>>
 	
-	<?php do_action('ase_theme_post_inside_top'); //action ?>
+	<?php do_action('ase_theme_post_inside_topÏ'); //action ?>
 
 	<?php the_content(); ?>
 
 	<?php wp_link_pages( array(
-		'before'      => '<div class="spanky-page-links"><span class="spanky-page-links-title">' . __( 'Pages:', 'spanky' ) . '</span>',
+		'before'      => '<div class="andersen-page-links"><span class="andersen-page-links-title">' . __( 'Pages:', 'andersen' ) . '</span>',
 		'after'       => '</div>',
 		'link_before' => '<span>',
 		'link_after'  => '</span>',
@@ -22,10 +22,10 @@ do_action('ase_theme_post_before'); //action ?>
 
 	<?php if (is_single()){ ?>
 
-	<div class="spanky-post-meta">
-		<div class="spanky-cat-links"><?php echo get_the_category_list( _x( '<span>&middot;</span> ', '', 'spanky' ) ); ?></div>
-		<?php echo get_the_tag_list('<div class="spanky-tag-links">','<span>&middot;</span> ','</div>'); ?>
-		<a class="spanky-comments-toggle" href="#" onclick="return false;" data-target="#spanky-comments" data-toggle="collapse"><i class="spankycon spankycon-comments"></i>&nbsp;<?php comments_number( ' ', '<span>1</span>', '<span>%</span>' ); ?></a>
+	<div class="andersen-post-meta">
+		<div class="andersen-cat-links"><?php echo get_the_category_list( _x( '<span>&middot;</span> ', '', 'andersen' ) ); ?></div>
+		<?php echo get_the_tag_list('<div class="andersen-tag-links">','<span>&middot;</span> ','</div>'); ?>
+		<a class="andersen-comments-toggle" href="#" onclick="return false;" data-target="#andersen-comments" data-toggle="collapse"><i class="andersencon andersencon-comments"></i>&nbsp;<?php comments_number( ' ', '<span>1</span>', '<span>%</span>' ); ?></a>
 	</div>
 	<?php } ?>
 

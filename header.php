@@ -19,9 +19,9 @@
 
 	<?php do_action('ase_theme_header_before'); //action ?>
 
-	<a class="spanky-menu-toggle" href="#">Menu</a>
+	<a class="andersen-menu-toggle" href="#">Menu</a>
 
-	<header id="spanky-header" class="spanky-header">
+	<header id="andersen-header" class="andersen-header">
 
 		<?php do_action('ase_theme_header_inside_top'); //action ?>
 
@@ -29,7 +29,7 @@
 			get_template_part('partials/brand-block');
 		}
 
-		wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'spanky-nav-menu unstyled','container_id' => 'spanky-primary-nav', 'container' => false ) ); ?>
+		wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'andersen-nav-menu unstyled','container_id' => 'andersen-primary-nav', 'container' => false ) ); ?>
 
 		<?php do_action('ase_theme_header_inside_bottom'); //action ?>
 	</header>

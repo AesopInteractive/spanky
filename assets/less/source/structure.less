@@ -1,4 +1,4 @@
-.spanky-header {
+.andersen-header {
 	width:100%;
 	min-height: @header-height;
 	background:@dark;
@@ -6,7 +6,7 @@
     z-index: 120;
     padding-left:@sb-width;
 }
-.spanky-content-left {
+.andersen-content-left {
 	width:@sb-width;
 	height:100%;
 	top:0;
@@ -15,33 +15,33 @@
     z-index: 121; //clears header
 	background:lighten(@dark,10);
 }
-.spanky-content-right {
+.andersen-content-right {
 	padding-left:@sb-width;
 }
 
-.spanky-entry-content {
+.andersen-entry-content {
     padding-top: 12rem;
     padding-bottom: 2rem;
 
-    p,ul,ol,h1,h2,h3,h4,h5,h6,.spanky-page-links, .spanky-post-meta,.sharedaddy.sd-sharing-enabled {
-    	.spanky-width;
+    p,ul,ol,h1,h2,h3,h4,h5,h6,.andersen-page-links, .andersen-post-meta,.sharedaddy.sd-sharing-enabled {
+    	.andersen-width;
     }
 
-    &.spanky-top-space {
+    &.andersen-top-space {
         margin-top:@header-height;
     }
 }
 
-.spanky-sb {
+.andersen-sb {
 
 }
 
 //widgets
-.spanky-widget {
+.andersen-widget {
     ul,ol {
         list-style:none;
         margin:0;
-        .spanky-alt-text;
+        .andersen-alt-text;
         color:@gray-light;
         padding:1rem;
     }
@@ -54,7 +54,7 @@
 
 // admin bar fixes
 .admin-bar {
-    .spanky-content-left {
+    .andersen-content-left {
         top:32px;
     }
 }
@@ -62,39 +62,39 @@
 // single page
 
 .page {
-    .spanky-header {
+    .andersen-header {
         padding-left:0;
     }
-    .spanky-footer {
+    .andersen-footer {
         padding-left:0;
     }
 
     &.menu-open {
-        .spanky-header {
-            .spanky-brand-block {
+        .andersen-header {
+            .andersen-brand-block {
                 display: none;
             }
         }
     }
 }
 .page-template-template-sidebar-php {
-    .spanky-header .spanky-brand-block {
+    .andersen-header .andersen-brand-block {
         width:100%;
     }
-    .spanky-brand-block.is-page {
+    .andersen-brand-block.is-page {
         float: none;
     }
 }
 
 // footer
-.spanky-footer {
+.andersen-footer {
     padding-left:@sb-width;
 }
-.spanky-footer-text {
+.andersen-footer-text {
     @color: lighten(@text-color, 15);
     
     color: @color;
-    .spanky-width;
+    .andersen-width;
     font-family: @font-family-sans-serif;
     font-size: @font-size-small;
 }
@@ -133,7 +133,7 @@
 .aesop-story-highlights-widget {
 
     .aesop-story-highlights-title {
-        .spanky-sb-heading;
+        .andersen-sb-heading;
     }
 
     p{

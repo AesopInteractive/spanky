@@ -6,11 +6,11 @@ $author_img = get_avatar($author_id,50,'', $author_name);
 
 ?>
 
-<div class="spanky-meta-block">
-	<?php echo the_title('<h2 class="spanky-entry-title">','</h2>');?>
-	<div class="spanky-meta-block-author">
+<div class="andersen-meta-block">
+	<?php echo the_title('<h2 class="andersen-entry-title">','</h2>');?>
+	<div class="andersen-meta-block-author">
 		<?php echo $author_img;?>
-		<span class="spanky-posted-by">posted by</span>
-		<span class="spanky-author-name"><?php echo $author_name;?></span>
+		<span class="andersen-posted-by">posted by</span>
+		<span class="andersen-author-name"><?php echo $author_name;?></span>
 	</div>
 </div>

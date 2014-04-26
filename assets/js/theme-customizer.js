@@ -9,37 +9,37 @@
 	// Update the site title in real time...
 	wp.customize( 'blogname', function( value ) {
 	    value.bind( function( newval ) {
-	        $('.spanky-site-title a').html( newval );
+	        $('.andersen-site-title a').html( newval );
 	    });
 	});
 
 	//Update site background color...
-	wp.customize( 'spanky_background_color', function( value ) {
+	wp.customize( 'andersen_background_color', function( value ) {
 	    value.bind( function( newval ) {
 	        $('body,.aesop-parallax-sc-caption-wrap').css('background-color', newval );
-	        $('.spanky-post-meta .spanky-cat-links span, .spanky-post-meta .spanky-tag-links span').css('color', newval );
+	        $('.andersen-post-meta .andersen-cat-links span, .andersen-post-meta .andersen-tag-links span').css('color', newval );
 	    });
 	});
 
 	//Update site text color
-	wp.customize( 'spanky_text_color', function( value ) {
+	wp.customize( 'andersen_text_color', function( value ) {
 	    value.bind( function( newval ) {
-	        $('body, .spanky-post-meta, .spanky-comments-toggle,ol.commentlist li div.comment-metadata a, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-meta, .aesop-story-highlights-shortcode p, .spanky-page-links span, .spanky-page-links .page-numbers,.spanky-widget a,.aesop-story-highlights-widget p,.aesop-story-highlights-widget .aesop-story-highlights-title,.spanky-sb-heading,.aesop-parallax-sc-caption-wrap,.aesop-image-component .aesop-img-enlarge, .aesop-image-component .aesop-image-component-caption').css('color', newval );
+	        $('body, .andersen-post-meta, .andersen-comments-toggle,ol.commentlist li div.comment-metadata a, .andersen-indexpost-item .andersen-indexpost-item-inner .andersen-indexpost-meta, .aesop-story-highlights-shortcode p, .andersen-page-links span, .andersen-page-links .page-numbers,.andersen-widget a,.aesop-story-highlights-widget p,.aesop-story-highlights-widget .aesop-story-highlights-title,.andersen-sb-heading,.aesop-parallax-sc-caption-wrap,.aesop-image-component .aesop-img-enlarge, .aesop-image-component .aesop-image-component-caption').css('color', newval );
 	    });
 	});
 
 	//Update site linkcolor
-	wp.customize( 'spanky_link_color', function( value ) {
+	wp.customize( 'andersen_link_color', function( value ) {
 	    value.bind( function( newval ) {
-	        $('a,a:hover,.spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-readmore, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-entry-title a:hover,.spanky-nav-menu li a:hover,.spanky-nav-menu li a,.spanky-nav-menu li.current-menu-item a, .spanky-post-meta .spanky-cat-links a:hover, .spanky-post-meta .spanky-tag-links a:hover,.spanky-comments-toggle:hover').css('color', newval );
-	   	    $('.btn, .btn:hover, input[type=submit], input[type=reset], input[type=button], input[type=button]:hover,.spanky-meta-block').css('background-color', newval );
+	        $('a,a:hover,.andersen-indexpost-item .andersen-indexpost-item-inner .andersen-indexpost-readmore, .andersen-indexpost-item .andersen-indexpost-item-inner .andersen-indexpost-entry-title a:hover,.andersen-nav-menu li a:hover,.andersen-nav-menu li a,.andersen-nav-menu li.current-menu-item a, .andersen-post-meta .andersen-cat-links a:hover, .andersen-post-meta .andersen-tag-links a:hover,.andersen-comments-toggle:hover').css('color', newval );
+	   	    $('.btn, .btn:hover, input[type=submit], input[type=reset], input[type=button], input[type=button]:hover,.andersen-meta-block').css('background-color', newval );
 	    });
 	});
 
 	//Update Footer Text
-	wp.customize( 'spanky_footer_text', function( value ) {
+	wp.customize( 'andersen_footer_text', function( value ) {
 	    value.bind( function( newval ) {
-	        $('.spanky-footer-text').html( newval );
+	        $('.andersen-footer-text').html( newval );
 	    });
 	});
 

@@ -40,12 +40,12 @@ module.exports = function(grunt) {
    		uglify: {
             plugins: {
                 options: {
-                    sourceMap: 'js/spanky.js.map',
-                    sourceMappingURL: 'spanky.js.map',
+                    sourceMap: 'js/andersen.js.map',
+                    sourceMappingURL: 'andersen.js.map',
                     sourceMapPrefix: 2
                 },
                	files: {
-                    'js/spanky.min.js': [
+                    'js/andersen.min.js': [
                     	'js/source/transition.js',
                      	'js/source/collapse.js',
                         'js/source/general.js'

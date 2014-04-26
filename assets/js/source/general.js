@@ -5,8 +5,8 @@ jQuery(document).ready(function(){
 		windowWidth			= jQuery(window).width(),
 		body 				= jQuery('body'),
 		chapterCover 		= jQuery('.aesop-article-chapter'),
-		headerHeight		= jQuery('.spanky-header').height(),
-		menuToggle			= jQuery('.spanky-menu-toggle');
+		headerHeight		= jQuery('.andersen-header').height(),
+		menuToggle			= jQuery('.andersen-menu-toggle');
 
 	// In View Animations
 	jQuery('.aesop-image-component, .aesop-audio-component').addClass('aesop-component-invisible');

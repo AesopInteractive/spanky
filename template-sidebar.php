@@ -10,7 +10,7 @@ get_header();
 	<?php get_template_part('content','sidebar');?>
 
 	<!-- Story Loop -->
-	<div class="spanky-content-right">
+	<div class="andersen-content-right">
 
 		<?php
 
@@ -18,7 +18,7 @@ get_header();
 
 				while ( have_posts() ) : the_post();
 
-					?><div class="spanky-entry-content"><?php the_content();?></div><?php
+					?><div class="andersen-entry-content"><?php the_content();?></div><?php
 
 				endwhile;
 

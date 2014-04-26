@@ -1,9 +1,9 @@
 
-	<footer class="spanky-footer">
-		<p class="spanky-footer-text">
+	<footer class="andersen-footer">
+		<p class="andersen-footer-text">
 			<?php 
 
-			$footertext = get_theme_mod('spanky_footer_text');
+			$footertext = get_theme_mod('andersen_footer_text');
 
 			if ($footertext) {
 				echo $footertext;

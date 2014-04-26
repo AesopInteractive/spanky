@@ -1,6 +1,6 @@
 <?php
 
-function spanky_custom_register($wp_customize){
+function andersen_custom_register($wp_customize){
 	if ( ! class_exists( 'Spanky_WP_Customize_Textarea_Control' ) ) {
 	    class Spanky_WP_Customize_Textarea_Control extends WP_Customize_Control {
 	    	public $type = 'textarea';
@@ -16,77 +16,77 @@ function spanky_custom_register($wp_customize){
 	    }
 	}
 }
-add_action( 'customize_register', 'spanky_custom_register' );
+add_action( 'customize_register', 'andersen_custom_register' );
 
-class spankyCustomizer {
+class andersenCustomizer {
 
 	// add new options to new section
 	public static function register($wp_customize){
 
 		// APPEARENCE
-		$wp_customize->add_section( 'spanky_appearence', array(
-			'title' 	=> __( 'Spanky', 'spanky' ),
+		$wp_customize->add_section( 'andersen_appearence', array(
+			'title' 	=> __( 'Spanky', 'andersen' ),
 			'priority' 	=> 110
 		) );
 
 		// Logo
-		$wp_customize->add_setting( 'spanky_site_logo', array(
+		$wp_customize->add_setting( 'andersen_site_logo', array(
 			'type'		=> 'theme_mod',
 			'transport' => 'postMessage'
 		) );
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'spanky_site_logo', array(
-			'label' => __( 'Site Logo (optional)', 'spanky' ),
-			'section' => 'spanky_appearence',
-			'settings' => 'spanky_site_logo',
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'andersen_site_logo', array(
+			'label' => __( 'Site Logo (optional)', 'andersen' ),
+			'section' => 'andersen_appearence',
+			'settings' => 'andersen_site_logo',
 		) ) );
 
 		// BG Color
-		$wp_customize->add_setting( 'spanky_background_color', array(
+		$wp_customize->add_setting( 'andersen_background_color', array(
 			'type'		=> 'theme_mod',
 			'transport' => 'postMessage',
 			'default'	=> '#FFFFFF',
 		) );
-		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'spanky_background_color', array(
-			'label' 	=> __('Background', 'spanky'),
-			'section' 	=> 'spanky_appearence',
-			'settings' 	=> 'spanky_background_color'
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'andersen_background_color', array(
+			'label' 	=> __('Background', 'andersen'),
+			'section' 	=> 'andersen_appearence',
+			'settings' 	=> 'andersen_background_color'
 		) ) );
 
 		// Index Text COlor
-		$wp_customize->add_setting( 'spanky_text_color', array(
+		$wp_customize->add_setting( 'andersen_text_color', array(
 			'type' 		=> 'theme_mod',
 			'transport' => 'postMessage',
 			'default'	=> '#494949',
 		) );
-		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'spanky_text_color', array(
-			'label' 	=> __('Text', 'spanky'),
-			'section' 	=> 'spanky_appearence',
-			'settings' 	=> 'spanky_text_color'
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'andersen_text_color', array(
+			'label' 	=> __('Text', 'andersen'),
+			'section' 	=> 'andersen_appearence',
+			'settings' 	=> 'andersen_text_color'
 		) ) );
 
 		// Link COlor
-		$wp_customize->add_setting( 'spanky_link_color', array(
+		$wp_customize->add_setting( 'andersen_link_color', array(
 			'type' 		=> 'theme_mod',
 			'transport' => 'postMessage',
 			'default'	=> '#428bca',
 		) );
-		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'spanky_link_color', array(
-			'label' 	=> __('Link', 'spanky'),
-			'section' 	=> 'spanky_appearence',
-			'settings' 	=> 'spanky_link_color'
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'andersen_link_color', array(
+			'label' 	=> __('Link', 'andersen'),
+			'section' 	=> 'andersen_appearence',
+			'settings' 	=> 'andersen_link_color'
 		) ) );
 
 		// Footer Text
-		$wp_customize->add_setting( 'spanky_footer_text', array(
+		$wp_customize->add_setting( 'andersen_footer_text', array(
             'default'    =>  '<a href="http://wordpress.org">Proudly powered by WordPress</a>',
             'type'       => 'theme_mod',
             'transport'  => 'postMessage',
             'sanitize_callback' => self::sanitize_text_field(),
         ) );
-        $wp_customize->add_control( new Spanky_WP_Customize_Textarea_Control( $wp_customize, 'spanky_footer_text', array(
+        $wp_customize->add_control( new Spanky_WP_Customize_Textarea_Control( $wp_customize, 'andersen_footer_text', array(
             'label'    	=> __( 'Footer Text', 'flacker' ),
-            'section'  	=> 'spanky_appearence',
-            'settings' 	=> 'spanky_footer_text',
+            'section'  	=> 'andersen_appearence',
+            'settings' 	=> 'andersen_footer_text',
         ) ) );
 
 		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
@@ -95,14 +95,14 @@ class spankyCustomizer {
 	}
 
    	public static function live_preview() {
-      	wp_enqueue_script('spanky-themecustomizer', SPANKY_THEME_URL.'/assets/js/theme-customizer.js', array( 'jquery','customize-preview' ),	SPANKY_THEME_VERSION, true);
+      	wp_enqueue_script('andersen-themecustomizer', SPANKY_THEME_URL.'/assets/js/theme-customizer.js', array( 'jquery','customize-preview' ),	SPANKY_THEME_VERSION, true);
    	}
 
 	public static function header_output() {
 
- 		$bgcolor 	= get_theme_mod('spanky_background_color');
- 		$linkcolor 	= get_theme_mod('spanky_link_color');
- 		$textcolor 	= get_theme_mod('spanky_text_color');
+ 		$bgcolor 	= get_theme_mod('andersen_background_color');
+ 		$linkcolor 	= get_theme_mod('andersen_link_color');
+ 		$textcolor 	= get_theme_mod('andersen_text_color');
 
       	?>
       	<!--Customizer CSS-->
@@ -111,54 +111,54 @@ class spankyCustomizer {
 
 	           	// text color
 	           	if ( !empty ( $textcolor ) ) {
-	           		self::generate_css('body, .spanky-post-meta, .spanky-comments-toggle,ol.commentlist li div.comment-metadata a, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-meta, .aesop-story-highlights-shortcode p, .spanky-page-links span, .spanky-page-links .page-numbers,.spanky-widget a,.aesop-story-highlights-widget p,.aesop-story-highlights-widget .aesop-story-highlights-title,.spanky-sb-heading,.aesop-parallax-sc-caption-wrap,.aesop-image-component .aesop-img-enlarge, .aesop-image-component .aesop-image-component-caption', 'color', 'spanky_text_color');
+	           		self::generate_css('body, .andersen-post-meta, .andersen-comments-toggle,ol.commentlist li div.comment-metadata a, .andersen-indexpost-item .andersen-indexpost-item-inner .andersen-indexpost-meta, .aesop-story-highlights-shortcode p, .andersen-page-links span, .andersen-page-links .page-numbers,.andersen-widget a,.aesop-story-highlights-widget p,.aesop-story-highlights-widget .aesop-story-highlights-title,.andersen-sb-heading,.aesop-parallax-sc-caption-wrap,.aesop-image-component .aesop-img-enlarge, .aesop-image-component .aesop-image-component-caption', 'color', 'andersen_text_color');
 	           	}
 
 	           	// backgrond color
 				if ( !empty ( $bgcolor ) ) {
-	           		self::generate_css('body,.aesop-parallax-sc-caption-wrap', 'background-color', 'spanky_background_color');
-	           		self::generate_css('.spanky-post-meta .spanky-cat-links span, .spanky-post-meta .spanky-tag-links span', 'color', 'spanky_background_color');
+	           		self::generate_css('body,.aesop-parallax-sc-caption-wrap', 'background-color', 'andersen_background_color');
+	           		self::generate_css('.andersen-post-meta .andersen-cat-links span, .andersen-post-meta .andersen-tag-links span', 'color', 'andersen_background_color');
 
-	           		$dark 		=   spanky_darken($bgcolor, 1.3);
-	           		$darker 	=  	spanky_darken($bgcolor, 1.5);
-	           		$darkest 	=	spanky_darken($bgcolor, 1.7);
+	           		$dark 		=   andersen_darken($bgcolor, 1.3);
+	           		$darker 	=  	andersen_darken($bgcolor, 1.5);
+	           		$darkest 	=	andersen_darken($bgcolor, 1.7);
 
 	           		?>
 
-	           		.spanky-page-links span, 
-	           		.spanky-page-links .page-numbers,
-	           		.spanky-post-meta,
-	           		.spanky-content-left{
+	           		.andersen-page-links span, 
+	           		.andersen-page-links .page-numbers,
+	           		.andersen-post-meta,
+	           		.andersen-content-left{
 						background:<?php echo $dark;?>;
 	           		}
 	           		.aesop-story-highlights-shortcode {
 	           			border-left:1px solid <?php echo $dark;?>;
 	           		}
-	           		.spanky-post-meta,
-	           		.spanky-index-listing .spanky-indexpost-item {
+	           		.andersen-post-meta,
+	           		.andersen-index-listing .andersen-indexpost-item {
 	           			border-top:1px solid <?php echo $dark;?>;
 	           		}
-	           		.menu-open .spanky-nav-menu li a,
-	           		.spanky-comments-wrap #spanky-comments,
-	           		.spanky-post-meta {
+	           		.menu-open .andersen-nav-menu li a,
+	           		.andersen-comments-wrap #andersen-comments,
+	           		.andersen-post-meta {
 	           			border-bottom:1px solid <?php echo $dark;?>;
 	           		}
-	           		[class*=spanky-index-listing-] .spanky-indexpost-item:first-child,
+	           		[class*=andersen-index-listing-] .andersen-indexpost-item:first-child,
 	           		ol.commentlist .children li {
 	           			border-top:1px solid <?php echo $dark;?>;
 	           		}
-	           		.spanky-page-links span, .spanky-page-links .page-numbers {
+	           		.andersen-page-links span, .andersen-page-links .page-numbers {
 	           			border:1px solid <?php echo $dark;?>;
 	           		}
 	           		.aesop-story-highlights-widget .aesop-story-highlights-title,
-	           		.spanky-sb-heading {
+	           		.andersen-sb-heading {
 	           			background:<?php echo $darker;?>;
 	           		}
-	           		.spanky-img {
+	           		.andersen-img {
 	           			border:4px solid <?php echo $darker;?>;
 	           		}
-	           		.spanky-brand-block,
-	           		.spanky-header {
+	           		.andersen-brand-block,
+	           		.andersen-header {
 	           			background:<?php echo $darkest;?>;
 	           		}
 	           		<?php
@@ -166,17 +166,17 @@ class spankyCustomizer {
 
 	      		// link color
 	      		if ( !empty ( $linkcolor ) ) {
-	           		self::generate_css('a,a:hover,.spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-readmore, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-entry-title a:hover,.spanky-nav-menu li a:hover,.spanky-nav-menu li a,.spanky-nav-menu li.current-menu-item a, .spanky-post-meta .spanky-cat-links a:hover, .spanky-post-meta .spanky-tag-links a:hover,.spanky-comments-toggle:hover', 'color', 'spanky_link_color');
-	           		self::generate_css('.btn, .btn:hover, input[type=submit], input[type=reset], input[type=button], input[type=button]:hover,.spanky-meta-block', 'background-color', 'spanky_link_color');
+	           		self::generate_css('a,a:hover,.andersen-indexpost-item .andersen-indexpost-item-inner .andersen-indexpost-readmore, .andersen-indexpost-item .andersen-indexpost-item-inner .andersen-indexpost-entry-title a:hover,.andersen-nav-menu li a:hover,.andersen-nav-menu li a,.andersen-nav-menu li.current-menu-item a, .andersen-post-meta .andersen-cat-links a:hover, .andersen-post-meta .andersen-tag-links a:hover,.andersen-comments-toggle:hover', 'color', 'andersen_link_color');
+	           		self::generate_css('.btn, .btn:hover, input[type=submit], input[type=reset], input[type=button], input[type=button]:hover,.andersen-meta-block', 'background-color', 'andersen_link_color');
 
 	      			?>
 	      			.btn {
-	      				border:1px solid <?php echo spanky_darken($linkcolor,1.1);?>;
+	      				border:1px solid <?php echo andersen_darken($linkcolor,1.1);?>;
 	      			}
-	      			.spanky-meta-block .spanky-meta-block-author .avatar,
+	      			.andersen-meta-block .andersen-meta-block-author .avatar,
 	      			.btn:hover {
-	      				border:1px solid <?php echo spanky_darken($linkcolor,1.2);?>;
-	      				background: <?php echo spanky_darken($linkcolor,1.2);?>;
+	      				border:1px solid <?php echo andersen_darken($linkcolor,1.2);?>;
+	      				background: <?php echo andersen_darken($linkcolor,1.2);?>;
 	      			}
 	      			<?php
 
@@ -215,8 +215,8 @@ class spankyCustomizer {
 
 }
 // Setup the Theme Customizer settings and controls...
-add_action( 'customize_register' , array( 'spankyCustomizer' , 'register' ) );
-add_action( 'wp_head' , array( 'spankyCustomizer' , 'header_output' ) );
-add_action( 'customize_preview_init' , array( 'spankyCustomizer' , 'live_preview' ) );
+add_action( 'customize_register' , array( 'andersenCustomizer' , 'register' ) );
+add_action( 'wp_head' , array( 'andersenCustomizer' , 'header_output' ) );
+add_action( 'customize_preview_init' , array( 'andersenCustomizer' , 'live_preview' ) );
 
 

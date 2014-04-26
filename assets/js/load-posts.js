@@ -15,9 +15,9 @@ jQuery(document).ready(function($) {
 	 */
 	if(pageNum <= max) {
 		// Insert the "More Posts" link.
-		$('.spanky-front-listing')
-			.append('<div class="spanky-index-listing clearfix spanky-index-listing-'+ pageNum +'"></div>')
-			.append('<p class="spanky-load-more-posts fix"><a class="btn btn-warning" href="#">Load More Stories</a></p>');
+		$('.andersen-front-listing')
+			.append('<div class="andersen-index-listing clearfix andersen-index-listing-'+ pageNum +'"></div>')
+			.append('<p class="andersen-load-more-posts fix"><a class="btn btn-warning" href="#">Load More Stories</a></p>');
 
 	}
 
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 	/**
 	 * Load new posts when the link is clicked.
 	 */
-	$('.spanky-load-more-posts a').click(function() {
+	$('.andersen-load-more-posts a').click(function() {
 
 
 		// Are there more posts to load?
@@ -34,27 +34,27 @@ jQuery(document).ready(function($) {
 			// Show that we're working.
 			$(this).text('Loading stories...');
 
-			$('.spanky-index-listing-'+ pageNum).load(nextLink + ' .spanky-indexpost-item',
+			$('.andersen-index-listing-'+ pageNum).load(nextLink + ' .andersen-indexpost-item',
 				function() {
 					// Update page number and nextLink.
 					pageNum++;
 					nextLink = nextLink.replace(/\/page\/[0-9]?/, '/page/'+ pageNum);
 
 					// Add a new placeholder, for when user clicks again.
-					$('.spanky-load-more-posts')
-						.before('<div class="spanky-index-listing clearfix spanky-index-listing-'+ pageNum +'"></div>')
+					$('.andersen-load-more-posts')
+						.before('<div class="andersen-index-listing clearfix andersen-index-listing-'+ pageNum +'"></div>')
 
 					// Update the button message.
 					if(pageNum <= max) {
-						$('.spanky-load-more-posts a').text('Load More Stories');
+						$('.andersen-load-more-posts a').text('Load More Stories');
 					} else {
-						$('.spanky-load-more-posts a').text('No more stories to load');
+						$('.andersen-load-more-posts a').text('No more stories to load');
 					}
 
 				}
 			);
 		} else {
-			$('.spanky-load-more-posts a').append('.');
+			$('.andersen-load-more-posts a').append('.');
 		}
 
 		return false;
