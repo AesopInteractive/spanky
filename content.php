@@ -31,6 +31,8 @@ get_template_part('content','sidebar');?>
 
 			comments_template();
 		}
+
+	get_template_part('partials/story-pager');
 	?>
 
 </article>

@@ -128,3 +128,57 @@
         }
     }
 }
+
+.spanky-story-pager {
+    .clearfix();
+    padding:2rem 0;
+    text-align: center;
+    position: relative;
+    font-size: @font-size-small;
+    font-family: @font-family-sans-serif;
+
+    a {
+        float:left;
+        color: inherit;
+        width:50%;
+        
+        img {
+            max-width:60px;
+            border-radius:50%;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: @font-size-xsmall;
+            margin:1rem 0 0;
+
+        }
+
+        .spanky-post-adjacent-title {
+            margin:0;
+            display: block;
+        }
+
+        &.previous {
+            text-align: left;
+
+            img {
+                float: left;
+                margin-right:1rem;
+            }
+        }
+
+        &.next {
+            text-align: right;
+            float:right;
+
+            img {
+                float: right;
+                margin-left:1rem;
+            }
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
