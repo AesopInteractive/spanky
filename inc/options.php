@@ -109,20 +109,22 @@ class spankyCustomizer {
       	<style type="text/css">
            	<?php
 
-	           	// background
+	           	// text color
 	           	if ( !empty ( $textcolor ) ) {
-	           		self::generate_css('body, .spanky-post-meta, .spanky-comments-toggle,ol.commentlist li div.comment-metadata a, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-meta, .aesop-story-highlights-shortcode p, .spanky-page-links span, .spanky-page-links .page-numbers', 'color', 'spanky_text_color');
+	           		self::generate_css('body, .spanky-post-meta, .spanky-comments-toggle,ol.commentlist li div.comment-metadata a, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-meta, .aesop-story-highlights-shortcode p, .spanky-page-links span, .spanky-page-links .page-numbers,.spanky-widget a,.aesop-story-highlights-widget p,.aesop-story-highlights-widget .aesop-story-highlights-title,.spanky-sb-heading,.aesop-parallax-sc-caption-wrap,.aesop-image-component .aesop-img-enlarge, .aesop-image-component .aesop-image-component-caption', 'color', 'spanky_text_color');
 	           	}
 
 	           	// backgrond color
 				if ( !empty ( $bgcolor ) ) {
-	           		self::generate_css('body', 'background-color', 'spanky_background_color');
+	           		self::generate_css('body,.aesop-parallax-sc-caption-wrap', 'background-color', 'spanky_background_color');
+	           		self::generate_css('.spanky-post-meta .spanky-cat-links span, .spanky-post-meta .spanky-tag-links span', 'color', 'spanky_background_color');
 
 	           		$dark 		=   spanky_darken($bgcolor, 1.3);
 	           		$darker 	=  	spanky_darken($bgcolor, 1.5);
 	           		$darkest 	=	spanky_darken($bgcolor, 1.7);
 
 	           		?>
+
 	           		.spanky-page-links span, 
 	           		.spanky-page-links .page-numbers,
 	           		.spanky-post-meta,
@@ -136,9 +138,14 @@ class spankyCustomizer {
 	           		.spanky-index-listing .spanky-indexpost-item {
 	           			border-top:1px solid <?php echo $dark;?>;
 	           		}
+	           		.menu-open .spanky-nav-menu li a,
 	           		.spanky-comments-wrap #spanky-comments,
 	           		.spanky-post-meta {
 	           			border-bottom:1px solid <?php echo $dark;?>;
+	           		}
+	           		[class*=spanky-index-listing-] .spanky-indexpost-item:first-child,
+	           		ol.commentlist .children li {
+	           			border-top:1px solid <?php echo $dark;?>;
 	           		}
 	           		.spanky-page-links span, .spanky-page-links .page-numbers {
 	           			border:1px solid <?php echo $dark;?>;
@@ -159,8 +166,20 @@ class spankyCustomizer {
 
 	      		// link color
 	      		if ( !empty ( $linkcolor ) ) {
-	           		self::generate_css('a', 'color', 'spanky_link_color');
-	           		self::generate_css('input[type=submit], input[type=reset], input[type=button], input[type=button]:hover', 'background', 'spanky_link_color');
+	           		self::generate_css('a,a:hover,.spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-readmore, .spanky-indexpost-item .spanky-indexpost-item-inner .spanky-indexpost-entry-title a:hover,.spanky-nav-menu li a:hover,.spanky-nav-menu li a,.spanky-nav-menu li.current-menu-item a, .spanky-post-meta .spanky-cat-links a:hover, .spanky-post-meta .spanky-tag-links a:hover,.spanky-comments-toggle:hover', 'color', 'spanky_link_color');
+	           		self::generate_css('.btn, .btn:hover, input[type=submit], input[type=reset], input[type=button], input[type=button]:hover,.spanky-meta-block', 'background-color', 'spanky_link_color');
+
+	      			?>
+	      			.btn {
+	      				border:1px solid <?php echo spanky_darken($linkcolor,1.1);?>;
+	      			}
+	      			.spanky-meta-block .spanky-meta-block-author .avatar,
+	      			.btn:hover {
+	      				border:1px solid <?php echo spanky_darken($linkcolor,1.2);?>;
+	      				background: <?php echo spanky_darken($linkcolor,1.2);?>;
+	      			}
+	      			<?php
+
 	      		}
 
       		?>
