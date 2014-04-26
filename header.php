@@ -13,11 +13,17 @@
 	<?php wp_head(); ?>
 
 	</head>
+
+	<?php do_action('ase_theme_body_before'); //action ?>
 	<body <?php body_class(); ?>>
+
+	<?php do_action('ase_theme_header_before'); //action ?>
 
 	<a class="spanky-menu-toggle" href="#">Menu</a>
 
 	<header id="spanky-header" class="spanky-header">
+
+		<?php do_action('ase_theme_header_inside_top'); //action ?>
 
 		<?php if (is_page() && !is_page_template('template-sidebar.php')){
 			get_template_part('partials/brand-block');
@@ -25,4 +31,7 @@
 
 		wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'spanky-nav-menu unstyled','container_id' => 'spanky-primary-nav', 'container' => false ) ); ?>
 
+		<?php do_action('ase_theme_header_inside_bottom'); //action ?>
 	</header>
+
+	<?php do_action('ase_theme_header_after'); //action ?>

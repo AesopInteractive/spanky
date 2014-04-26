@@ -15,6 +15,10 @@
 		</div>
 	</footer>
 
+	<?php do_action('ase_theme_body_inside_borrom'); //action ?>
+
 	</body>
+
+	<?php do_action('ase_theme_body_after'); //action ?>
 
 </html>

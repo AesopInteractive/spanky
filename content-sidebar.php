@@ -1,9 +1,9 @@
-<?php do_action('ase_sb_before'); //action ?>
+<?php do_action('ase_theme_sb_before'); //action ?>
 
 <!-- Aside -->
 <aside class="spanky-content-left">
 
-	<?php do_action('ase_sb_inside_top'); //action
+	<?php do_action('ase_theme_sb_inside_top'); //action
 
 	get_template_part('partials/brand-block');
 
@@ -43,9 +43,9 @@
 	</div>
 	<?php } ?>
 
-	<?php do_action('ase_sb_inside_bottom'); //action ?>
+	<?php do_action('ase_theme_sb_inside_bottom'); //action ?>
 
 </aside>
 
 
-<?php do_action('ase_sb_after'); //action ?>
+<?php do_action('ase_theme_sb_after'); //action ?>

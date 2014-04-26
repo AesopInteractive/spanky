@@ -2,10 +2,15 @@
 
 global $post;
 
-get_template_part('content','sidebar');?>
+get_template_part('content','sidebar');
+
+do_action('ase_theme_post_before'); //action ?>
 
 <!-- Story Entry -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('spanky-content-right spanky-entry-content aesop-entry-content clearfix'); ?>>
+	
+	<?php do_action('ase_theme_post_inside_top'); //action ?>
+
 	<?php the_content(); ?>
 
 	<?php wp_link_pages( array(
@@ -35,4 +40,7 @@ get_template_part('content','sidebar');?>
 	get_template_part('partials/story-pager');
 	?>
 
+	<?php do_action('ase_theme_post_inside_bottom'); //action ?>
+
 </article>
+<?php do_action('ase_theme_post_after'); //action ?>
