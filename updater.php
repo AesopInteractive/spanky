@@ -35,7 +35,7 @@ class andersenUpdater {
 	}
 
 	function license_menu() {
-		add_theme_page( 'Andersen License', 'Andersen License', 'manage_options', 'horizon-license', array($this,'license_page' ));
+		add_theme_page( 'Andersen License', 'Andersen License', 'manage_options', 'andersen-license', array($this,'license_page' ));
 	}
 
 	function license_page() {
@@ -43,7 +43,7 @@ class andersenUpdater {
 		$status 	= get_option( 'ba_andersen_license_key_status' );
 		?>
 		<div class="wrap">
-			<h2><?php _e('Andersen License','horizon'); ?></h2>
+			<h2><?php _e('Andersen License','andersen'); ?></h2>
 			<form method="post" action="options.php">
 
 				<?php settings_fields('ba_andersen_theme_license'); ?>
@@ -56,7 +56,7 @@ class andersenUpdater {
 							</th>
 							<td>
 								<input id="ba_andersen_license_key" name="ba_andersen_license_key" type="text" class="regular-text" value="<?php esc_attr( $license ); ?>" />
-								<label class="description" for="ba_andersen_license_key"><?php _e('Enter your license key','horizon'); ?></label>
+								<label class="description" for="ba_andersen_license_key"><?php _e('Enter your license key','andersen'); ?></label>
 							</td>
 						</tr>
 						<?php if( false !== $license ) { ?>
@@ -68,10 +68,10 @@ class andersenUpdater {
 									<?php if( $status !== false && $status == 'valid' ) { ?>
 										<span style="color:green;"><?php _e('active'); ?></span>
 										<?php wp_nonce_field( 'ba_andersen_nonce', 'ba_andersen_nonce' ); ?>
-										<input type="submit" class="button-secondary" name="ba_andersen_license_deactivate" value="<?php _e('Deactivate License','horizon'); ?>"/>
+										<input type="submit" class="button-secondary" name="ba_andersen_license_deactivate" value="<?php _e('Deactivate License','andersen'); ?>"/>
 									<?php } else {
 										wp_nonce_field( 'ba_andersen_nonce', 'ba_andersen_nonce' ); ?>
-										<input type="submit" class="button-secondary" name="ba_andersen_license_activate" value="<?php _e('Activate License','horizon'); ?>"/>
+										<input type="submit" class="button-secondary" name="ba_andersen_license_activate" value="<?php _e('Activate License','andersen'); ?>"/>
 									<?php } ?>
 								</td>
 							</tr>
