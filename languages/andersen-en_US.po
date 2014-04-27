@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Andersen\n"
+"POT-Creation-Date: 2014-04-27 09:25-0600\n"
+"PO-Revision-Date: 2014-04-27 09:25-0600\n"
+"Last-Translator: \n"
+"Language-Team:  <nick@aesopinteractive.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: ../comments.php:35
+msgid "Be the first to leave a comment!"
+msgstr ""
+
+#: ../content.php:17
+msgid "Pages:"
+msgstr ""
+
+#: ../functions.php:51
+msgid "Main Nav"
+msgstr ""
+
+#: ../functions.php:58
+msgid "Spanky Front Page Sidebar"
+msgstr ""
+
+#: ../functions.php:68
+msgid "Spanky Single Sidebar"
+msgstr ""
+
+#: ../header.php:22
+msgid "Menu"
+msgstr ""
+
+#: ../inc/options.php:28
+msgid "Spanky"
+msgstr ""
+
+#: ../inc/options.php:38
+msgid "Site Logo (optional)"
+msgstr ""
+
+#: ../inc/options.php:50
+msgid "Background"
+msgstr ""
+
+#: ../inc/options.php:62
+msgid "Text"
+msgstr ""
+
+#: ../inc/options.php:74
+msgid "Link"
+msgstr ""
+
+#: ../inc/options.php:87
+msgid "Footer Text"
+msgstr ""
+
+#: ../index.php:34
+msgid "Written by"
+msgstr ""
+
+#: ../index.php:37
+msgid "Read more..."
+msgstr ""
+
+#: ../partials/currently-viewing.php:21
+msgid "You searched for"
+msgstr ""
+
+#: ../partials/currently-viewing.php:21
+msgid "and we found"
+msgstr ""
+
+#: ../partials/currently-viewing.php:21
+msgid "results"
+msgstr ""
+
+#: ../partials/currently-viewing.php:25
+msgid "Entries authored by"
+msgstr ""
+
+#: ../partials/currently-viewing.php:29
+msgid "Archives  "
+msgstr ""
+
+#: ../partials/none.php:1
+msgid "Bummer. "
+msgstr ""
+
+#: ../partials/none.php:2
+msgid "I can't find what you're looking for. Try a search?"
+msgstr ""
+
+#: ../partials/story-pager.php:15
+msgid "Previous Story"
+msgstr ""
+
+#: ../partials/story-pager.php:23
+msgid "Next Story"
+msgstr ""
