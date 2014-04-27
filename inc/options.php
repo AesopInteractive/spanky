@@ -95,7 +95,7 @@ class andersenCustomizer {
 	}
 
    	public static function live_preview() {
-      	wp_enqueue_script('andersen-themecustomizer', SPANKY_THEME_URL.'/assets/js/theme-customizer.js', array( 'jquery','customize-preview' ),	SPANKY_THEME_VERSION, true);
+      	wp_enqueue_script('andersen-themecustomizer', ANDERSEN_THEME_URL.'/assets/js/theme-customizer.js', array( 'jquery','customize-preview' ),	ANDERSEN_THEME_VERSION, true);
    	}
 
 	public static function header_output() {

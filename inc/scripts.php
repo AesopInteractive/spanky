@@ -11,7 +11,7 @@ class andersenScriptLoader {
 
 	public function load_scripts(){
 
-		wp_enqueue_script('andersen-script', SPANKY_THEME_URL.'/assets/js/andersen.min.js', array('jquery','ai-core'), SPANKY_THEME_VERSION, true);
+		wp_enqueue_script('andersen-script', ANDERSEN_THEME_URL.'/assets/js/andersen.min.js', array('jquery','ai-core'), ANDERSEN_THEME_VERSION, true);
 		wp_enqueue_style('andersen-style', get_stylesheet_directory_uri().'/assets/css/style.css', 1.0, true);
 	}
 
@@ -22,7 +22,7 @@ class andersenScriptLoader {
 	 	// Add code to index pages.
 	 	if ( is_home() || is_archive() ) {
 	 		// Queue JS and CSS
-	 		wp_enqueue_script('andersen-post-loader',SPANKY_THEME_URL.'/assets/js/load-posts.js',array('jquery'),SPANKY_THEME_VERSION,true);
+	 		wp_enqueue_script('andersen-post-loader',ANDERSEN_THEME_URL.'/assets/js/load-posts.js',array('jquery'),ANDERSEN_THEME_VERSION,true);
 
 	 		// What page are we on? And what is the pages limit?
 	 		$max = $wp_query->max_num_pages;
