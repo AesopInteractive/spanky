@@ -19,7 +19,7 @@
 
 	<?php do_action('ase_theme_header_before'); //action ?>
 
-	<a class="andersen-menu-toggle" href="#">Menu</a>
+	<a class="andersen-menu-toggle" href="#"><?php apply_filters('andersen_menu_text', _e('Menu','andersen'));?></a>
 
 	<header id="andersen-header" class="andersen-header">
 

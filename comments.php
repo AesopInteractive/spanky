@@ -11,22 +11,18 @@
 		return;
 	}
 
-	if (have_comments()) {
-		$commentsClass = 'andersen-post-has-comments';
-	} else {
-		$commentsClass = null;
-	}
+	$commentsClass = have_comments() ? 'andersen-post-has-comments' : false;
 ?>
 
 <!-- Comments -->
 <?php do_action('andersen_before_comments');?>
 <div id="andersen-comments-wrap" class="andersen-comments-wrap">
-	
+
 	<div id="andersen-comments" class="collapse <?php echo $commentsClass;?>">
 
-		 <?php
+		<?php
 
-		  if (have_comments()) {
+		if (have_comments()) {
 
 			?><ol class="commentlist"><?php
 
@@ -34,16 +30,17 @@
 
 		  	?></ol><?php
 
-		  } else {
+		} else {
 
 		  		_e('Be the first to leave a comment!', 'andersen');
 
-		  }
+		}
 
-		  ?>
-		 <div class="navigation">
+		?>
+
+		<div class="navigation">
 		  <?php paginate_comments_links(); ?>
-		 </div>
+		</div>
 
 		<?php comment_form(); ?>
 	</div>

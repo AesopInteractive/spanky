@@ -15,15 +15,11 @@ class andersenFunctions {
 		require_once(SPANKY_THEME_DIR.'/inc/options.php' );
 		require_once(SPANKY_THEME_DIR.'/inc/scripts.php' );
 
-		add_action('after_setup_theme', array($this,'setup'));
-		add_filter('aesop_chapter_scroll_offset', array($this,'aesop_chapter_scroll_offset'));
-		add_filter('aesop_timeline_scroll_offset', array($this,'aesop_timeline_scroll_offset'));
-		add_filter('body_class', 		array($this,'body_class'));
-
-
-		add_filter('widget_text', 'do_shortcode');
-		add_filter('aesop_video_component_classes', array($this,'aesop_video_component_classes'));
-		add_filter('aesop_content_component_classes', array($this,'aesop_content_component_classes'));
+		add_action('after_setup_theme', 			array($this,'setup'));
+		add_filter('aesop_chapter_scroll_offset', 	array($this,'aesop_chapter_scroll_offset'));
+		add_filter('aesop_timeline_scroll_offset', 	array($this,'aesop_timeline_scroll_offset'));
+		add_filter('body_class', 					array($this,'body_class'));
+		add_filter('widget_text', 					'do_shortcode');
 	}
 
 	function setup(){
@@ -52,7 +48,7 @@ class andersenFunctions {
 		if ( function_exists( 'register_nav_menus' ) ){
 			register_nav_menus(
 				array(
-				  'main_nav' => 'Main Nav'
+				  'main_nav' => __('Main Nav','andersen')
 				)
 			);
 		}
@@ -76,6 +72,9 @@ class andersenFunctions {
 			'before_widget' => '<div class="andersen-widget">',
 			'after_widget' 	=> '</div>'
 	    ));
+
+	    // i18n
+	    load_theme_textdomain('andersen', SPANKY_THEME_DIR. '/languages');
 	}
 
 	function aesop_chapter_scroll_offset(){
@@ -86,15 +85,6 @@ class andersenFunctions {
 	function aesop_timeline_scroll_offset(){
 
 		return 70;
-	}
-	function aesop_video_component_classes(){
-
-		return 'test test';
-	}
-
-		function aesop_content_component_classes(){
-
-		return 'brandi';
 	}
 
 	function body_class($classes){
