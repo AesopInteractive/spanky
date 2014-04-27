@@ -25,13 +25,13 @@
 
 		<?php do_action('ase_theme_header_inside_top'); //action ?>
 
-		<?php if (is_page() && !is_page_template('template-sidebar.php')){
+		<?php if ( ( is_page() && !is_page_template('template-sidebar.php') ) || is_404() ){
 			get_template_part('partials/brand-block');
 		}
 
-		wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'andersen-nav-menu unstyled','container_id' => 'andersen-primary-nav', 'container' => false ) ); ?>
+		wp_nav_menu( array( 'theme_location' => 'main_nav','menu_class' => 'andersen-nav-menu unstyled','container_id' => 'andersen-primary-nav', 'container' => false ) );
 
-		<?php do_action('ase_theme_header_inside_bottom'); //action ?>
+		do_action('ase_theme_header_inside_bottom'); //action ?>
 	</header>
 
 	<?php do_action('ase_theme_header_after'); //action ?>

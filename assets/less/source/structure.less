@@ -61,9 +61,11 @@
 
 // single page
 
+.error404,
 .page {
     .andersen-header {
         padding-left:0;
+        top:0;
     }
     .andersen-footer {
         padding-left:0;
@@ -85,6 +87,12 @@
         float: none;
     }
 }
+.error404 {
+    .andersen-header .andersen-brand-block {
+        width:auto;
+        float:left;
+    }
+}
 
 // footer
 .andersen-footer {
@@ -92,7 +100,7 @@
 }
 .andersen-footer-text {
     @color: lighten(@text-color, 15);
-    
+
     color: @color;
     .andersen-width;
     font-family: @font-family-sans-serif;

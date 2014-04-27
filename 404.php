@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-?><main class="clearfix"><?php
+<main class="clearfix andersen-width"><?php
 
 	echo get_template_part( 'partials/none');
 
