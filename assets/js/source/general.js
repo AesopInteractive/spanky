@@ -6,7 +6,8 @@ jQuery(document).ready(function(){
 		body 				= jQuery('body'),
 		chapterCover 		= jQuery('.aesop-article-chapter'),
 		headerHeight		= jQuery('.andersen-header').height(),
-		menuToggle			= jQuery('.andersen-menu-toggle');
+		menuToggle			= jQuery('.andersen-menu-toggle'),
+		sbToggle			= jQuery('.andersen-sb-toggle');
 
 	// In View Animations
 	jQuery('.aesop-image-component, .aesop-audio-component').addClass('aesop-component-invisible');
@@ -36,7 +37,14 @@ jQuery(document).ready(function(){
    		jQuery(body).toggleClass('menu-open');
 
    	});
-   	jQuery('main').click(function(){
-   		jQuery(body).removeClass('menu-open');
+
+   	jQuery(sbToggle).click(function(e){
+   		e.preventDefault()
+   		jQuery('body').toggleClass('sb-menu-open');
+
+   	});
+
+   	jQuery('.andersen-content-right').click(function(){
+   		jQuery(body).removeClass('menu-open sb-menu-open');
    	});
 });

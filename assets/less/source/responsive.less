@@ -27,22 +27,44 @@
    }
 }
 @media(max-width:768px) {
-           .andersen-header {
-            position: absolute;
-            .opacity(0);
-        }
+    .andersen-content-left,
+    .andersen-header {
+        position: absolute;
+        .opacity(0);
+    }
 
     .andersen {
         &.home .andersen-sb {
-            position: absolute;
-            left:-10000px;
+            //position: absolute;
+            //left:-10000px;
         }
         .andersen-menu-toggle {
             visibility: visible;
         }
+        .andersen-sb-toggle {
+            visibility: visible;
+            position: absolute;
+            left:7px;
+            top:60px;
+            z-index: 141;
+            background: @link-color;
+            color:@dark;
+            width:auto;
+
+            &:before{
+                content: '';
+                border-right: 7px solid @dark;
+                height: 100%;
+                width: 7px;
+                position: fixed;
+                bottom: 0;
+                top: 0;
+                left:0;
+            }
+        }
         .andersen-content-left {
-            width:100%;
-            position: static;
+            width:@sb-width;
+            left:-@sb-width;
             bottom: auto;
         }
         .page-template-template-sidebar-php .andersen-footer,

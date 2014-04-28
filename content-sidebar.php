@@ -46,6 +46,6 @@
 	<?php do_action('ase_theme_sb_inside_bottom'); //action ?>
 
 </aside>
-
+<a class="andersen-sb-toggle" href="#">Open</a>
 
 <?php do_action('ase_theme_sb_after'); //action ?>
