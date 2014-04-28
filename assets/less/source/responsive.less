@@ -28,22 +28,30 @@
 }
 @media(max-width:768px) {
 
+    .andersen-brand-block {
+        position: fixed;
+        float:none;
+        width:100%;
+        top:0;
+        left:0;
+        right:0;
+    }
+
     .andersen-menu-toggle,
     .andersen-sb-toggle {
         visibility: visible;
         position: relative;
         z-index: 141;
+        top:20px;
         .andersen-btn-toggle;
     }
 
     .andersen-menu-toggle {
         position: fixed;
-        top:20px;
         right:0;
     }
     .andersen-sb-toggle {
         left:@sb-width;
-        top:20px;
         border-radius:0 2px 2px 0;
     }
     .andersen-menu-toggle {
@@ -68,10 +76,14 @@
             .box-shadow(inset 8px 0 -8px -8px rgba(0,0,0,1.0));
         }
     }
-        .andersen-content-left {
-            left:-@sb-width;
-            .transition(left .3s ease-in-out);
-        }
+    .sb-menu-open .andersen-content-left,
+    .menu-open .andersen-header {
+        top:@header-height;
+    }
+    .andersen-content-left {
+        left:-@sb-width;
+        .transition(left .3s ease-in-out);
+    }
     .andersen-header {
         height: 100%;
         width:@sb-width;
