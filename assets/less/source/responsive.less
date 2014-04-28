@@ -33,6 +33,7 @@
         visibility: visible;
         position: relative;
         z-index: 141;
+        .andersen-btn-toggle;
     }
 
     .andersen-menu-toggle {
@@ -43,12 +44,9 @@
     .andersen-sb-toggle {
         left:@sb-width;
         top:20px;
-        .andersen-btn-toggle;
         border-radius:0 2px 2px 0;
     }
     .andersen-menu-toggle {
-        visibility: visible;
-        .andersen-btn-toggle;
         border-radius:2px 0 0 2px;
     }
     .menu-open{
@@ -61,14 +59,6 @@
         .andersen-sb-toggle{
             .andersen-menu-toggle-open;
         }
-    }
-    .andersen.sb-menu-open {
-
-        &.admin-bar {
-            .andersen-content-left {
-                top:@adminbar;
-            }
-        }
 
         .andersen-content-left {
             left:0;
@@ -78,21 +68,19 @@
             .box-shadow(inset 8px 0 -8px -8px rgba(0,0,0,1.0));
         }
     }
-
-    .andersen-header {
-        .opacity(0);
-    }
-
-    .andersen-header {
-        right:-@sb-width;
-    }
-
-    .andersen {
-
         .andersen-content-left {
             left:-@sb-width;
             .transition(left .3s ease-in-out);
         }
+    .andersen-header {
+        height: 100%;
+        width:@sb-width;
+        right:-@sb-width;
+        .transition(right .3s ease-in-out);
+    }
+
+    .andersen {
+
         .page-template-template-sidebar-php .andersen-footer,
         .andersen-footer {
             padding-left: 0;
