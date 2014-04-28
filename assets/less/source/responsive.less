@@ -29,7 +29,6 @@
 @media(max-width:768px) {
     .andersen-content-left,
     .andersen-header {
-        position: absolute;
         .opacity(0);
     }
 
@@ -40,6 +39,7 @@
         }
         .andersen-menu-toggle {
             visibility: visible;
+            .andersen-btn-toggle;
         }
         .andersen-sb-toggle {
             visibility: visible;
@@ -47,14 +47,8 @@
             left:-14px;
             top:50%;
             z-index: 141;
-            background: @link-color;
-            color:@dark;
-            width:auto;
-            padding:0.3rem 0.6rem;
             .rotate(-90deg);
-            font-size: @font-size-small;
-            font-family: @font-family-sans-serif;
-            text-transform: uppercase;
+            .andersen-btn-toggle;
         }
         .andersen-content-left {
             width:@sb-width;
