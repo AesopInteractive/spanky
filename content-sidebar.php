@@ -47,7 +47,7 @@
 		<?php do_action('ase_theme_sb_inside_bottom'); //action ?>
 
 	</div>
-	<a class="andersen-sb-toggle" href="#"><i class="andersencon andersencon-list-ul"></i></a>
+	<a class="andersen-sb-toggle" href="#"><span>• • •</span></a>
 </aside>
 
 

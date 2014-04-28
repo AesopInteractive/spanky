@@ -5,10 +5,9 @@
         padding:0;
         width:@floating-menu-width;
         position: fixed;
-        top:0;
+        top:@header-height;
         bottom:0;
         .opacity(1);
-        .box-shadow(inset 8px 0 8px -8px rgba(0,0,0,1.0));
         right:0;
          .transition(right .3s ease-in-out);
     }
@@ -26,12 +25,5 @@
                 border-bottom:1px solid lighten(@dark,3);
             }
         }
-    }
-}
-
-// admin bar fixes
-.admin-bar {
-    .andersen-menu-toggle{
-        top:20px + @adminbar;
     }
 }
