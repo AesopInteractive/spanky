@@ -70,7 +70,7 @@ class andersenFunctions {
 
 		// front page sidebar
 		register_sidebars(1, array(
-			'name' 			=> __('Spanky Front Page Sidebar', 'andersen'),
+			'name' 			=> __('Default Sidebar', 'andersen'),
 			'id' 			=> 'andersen_sb',
 	      	'before_title' 	=> '<h6 class="andersen-sb-heading">',
 	      	'after_title' 	=> '</h6>',
@@ -80,7 +80,7 @@ class andersenFunctions {
 
 		// Single sidebar
 	    register_sidebars(1, array(
-			'name' 			=> __('Spanky Single Sidebar', 'andersen'),
+			'name' 			=> __('Single Sidebar', 'andersen'),
 			'id' 			=> 'andersen_single_sb',
 	      	'before_title' 	=> '<h6 class="andersen-sb-heading">',
 	      	'after_title' 	=> '</h6>',
