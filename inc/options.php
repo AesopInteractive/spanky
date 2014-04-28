@@ -25,7 +25,7 @@ class andersenCustomizer {
 
 		// APPEARENCE
 		$wp_customize->add_section( 'andersen_appearence', array(
-			'title' 	=> __( 'Spanky', 'andersen' ),
+			'title' 	=> __( 'Andersen', 'andersen' ),
 			'priority' 	=> 110
 		) );
 
