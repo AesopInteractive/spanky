@@ -1,10 +1,14 @@
 @media (max-width:1080px){
     .andersen-content-right{
-
-        padding-left: 295px;
-
-        p {
+        p,ul,ol,h1,h2,h3,h4,h5,h6,.andersen-page-links, .andersen-post-meta,.sharedaddy.sd-sharing-enabled,.andersen-story-pager,.aesop-image-component-caption,.aesop-video-component-caption,.aesop-documument-component{
+            padding-left: 15px;
             padding-right:15px;
+        }
+        .aesop-sequence-img-wrap .aesop-sequence-caption {
+            padding-left: 6.5rem;
+            &:before {
+                left:15px;
+            }
         }
     }
     .andersen-indexpost-item:first-child {
@@ -39,21 +43,94 @@
         padding-left: 0;
         padding-top:1rem;
 
-        p {
-            padding-left:1rem;
-            padding-right: 1rem;
-        }
     }
     .andersen-front-listing,
     .andersen-footer-text {
         padding-left:1rem;
         padding-right:1rem;
     }
-    .andersen-indexpost-item:first-child {
+    .andersen .andersen-index-listing .andersen-indexpost-item:first-child {
         margin-top: 0;
+        padding-top:1rem;
     }
     .andersen-brand-block .andersen-site-title {
         z-index: 120;
     }
+    .andersen-story-pager {
+        padding-left:1rem;
+        padding-right:1rem;
+        a {
+            img {
+                max-width:40px;
+            }
+            p {
+                font-size:1.2rem;
+                margin:0.25rem 0 0 0;
+            }
+            .andersen-post-adjacent-title {
+                font-size:1.6rem;
+            }
+        }
+    }
+}
 
+@media(max-width:480px){
+    .andersen {
+        font-size: @font-size-base - 2;
+
+        h1 { font-size: @font-size-h1 - 2;}
+        h2 { font-size: @font-size-h2 - 2;}
+
+        .andersen-content-right{
+
+        }
+        .andersen-index-listing .andersen-indexpost-item {
+            padding-top:3rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .andersen-load-more-posts {
+            margin-bottom: 2rem;
+        }
+        .aesop-story-highlights-shortcode {
+            padding-left:0;
+        }
+        .andersen-load-more-posts,
+        .andersen-indexpost-entry-title,
+        .andersen-indexpost-meta,
+        .andersen-post-meta {
+            padding-left: 0;
+            paddign-right:0;
+        }
+
+        .andersen-post-meta .andersen-cat-links, 
+        .andersen-post-meta .andersen-tag-links {
+            float: none;
+            width:100%;
+            margin-bottom: 0.5rem;
+        }
+        .andersen-post-meta .andersen-tag-links {
+            left:8px;
+        }
+        .andersen-comments-toggle {
+            float: none;
+            width:100%;
+            left:11px;
+        }
+        .andersen-comments-wrap {
+            margin-top:0;
+        }
+        ol.commentlist li.comment {
+            padding:0;
+        }
+        .andersen-story-pager .andersen-post-adjacent-title {
+            clear:both;
+            margin-top:0.5rem;
+            padding-left:0;
+            margin-left:0;
+        }
+        .andersen-post-adjacent.next img{
+            margin-bottom: 0.5rem;
+        }
+    }
 }
