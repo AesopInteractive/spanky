@@ -43,24 +43,18 @@
         }
         .andersen-sb-toggle {
             visibility: visible;
-            position: absolute;
-            left:7px;
-            top:60px;
+            position: fixed;
+            left:-14px;
+            top:50%;
             z-index: 141;
             background: @link-color;
             color:@dark;
             width:auto;
-
-            &:before{
-                content: '';
-                border-right: 7px solid @dark;
-                height: 100%;
-                width: 7px;
-                position: fixed;
-                bottom: 0;
-                top: 0;
-                left:0;
-            }
+            padding:0.3rem 0.6rem;
+            .rotate(-90deg);
+            font-size: @font-size-small;
+            font-family: @font-family-sans-serif;
+            text-transform: uppercase;
         }
         .andersen-content-left {
             width:@sb-width;

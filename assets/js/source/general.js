@@ -41,6 +41,7 @@ jQuery(document).ready(function(){
    	jQuery(sbToggle).click(function(e){
    		e.preventDefault()
    		jQuery('body').toggleClass('sb-menu-open');
+   		jQuery('html, body').animate({scrollTop:0});
 
    	});
 
