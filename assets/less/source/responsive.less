@@ -4,12 +4,12 @@
             padding-left: 15px;
             padding-right:15px;
         }
-        .andersen-load-more-posts,
+
         .andersen-indexpost-entry-title,
         .andersen-indexpost-meta,
         .andersen-post-meta {
             padding-left: 0;
-            paddign-right:0;
+            padding-right:0;
         }
         .aesop-sequence-img-wrap .aesop-sequence-caption {
             padding-left: 6.5rem;
@@ -21,7 +21,7 @@
     .andersen-indexpost-item:first-child {
         margin-top: 2rem ;
     }
-    .andersen-indexpost-item-inner {
+    .andersen-index-listing {
         padding-left:1rem;
         padding-right: 1rem;
    }
@@ -61,14 +61,20 @@
             padding-right:1rem;
         }
 
-        .andersen-index-listing .andersen-indexpost-item {
-            padding-top:3rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+        .andersen-index-listing {
 
-            &:first-child {
-                margin-top: 0;
-                padding-top:1rem;
+            padding-left:0;
+            padding-right: 0;
+
+            .andersen-indexpost-item {
+                padding-top:3rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+
+                &:first-child {
+                    margin-top: 0;
+                    padding-top:1rem;
+                }
             }
         }
         .andersen-brand-block .andersen-site-title {
@@ -134,11 +140,6 @@
 
         h1 { font-size: @font-size-h1 - 2;}
         h2 { font-size: @font-size-h2 - 2;}
-
-        .andersen-indexpost-item-inner {
-            padding-left:0;
-            padding-right: 0;
-        }
 
     }
 }
