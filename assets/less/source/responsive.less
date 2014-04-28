@@ -4,6 +4,13 @@
             padding-left: 15px;
             padding-right:15px;
         }
+        .andersen-load-more-posts,
+        .andersen-indexpost-entry-title,
+        .andersen-indexpost-meta,
+        .andersen-post-meta {
+            padding-left: 0;
+            paddign-right:0;
+        }
         .aesop-sequence-img-wrap .aesop-sequence-caption {
             padding-left: 6.5rem;
             &:before {
@@ -14,93 +21,87 @@
     .andersen-indexpost-item:first-child {
         margin-top: 2rem ;
     }
+    .andersen-indexpost-item-inner {
+        padding-left:1rem;
+        padding-right: 1rem;
+   }
 }
 @media(max-width:767px) {
-    .home .andersen-sb {
-        position: absolute;
-        left:-10000px;
-    }
-    .andersen-menu-toggle {
-        visibility: visible;
-    }
-
-    .andersen-header {
-        position: absolute;
-        .opacity(0);
-    }
-
-    .andersen-content-left {
-        width:100%;
-        position: static;
-        bottom: auto;
-    }
-    .page-template-template-sidebar-php .andersen-footer,
-    .andersen-footer {
-        padding-left: 0;
-    }
-    .andersen-content-right ,
-    .andersen-entry-content {
-        padding-left: 0;
-        padding-top:1rem;
-
-    }
-    .andersen-front-listing,
-    .andersen-footer-text {
-        padding-left:1rem;
-        padding-right:1rem;
-    }
-    .andersen .andersen-index-listing .andersen-indexpost-item:first-child {
-        margin-top: 0;
-        padding-top:1rem;
-    }
-    .andersen-brand-block .andersen-site-title {
-        z-index: 120;
-    }
-    .andersen-story-pager {
-        padding-left:1rem;
-        padding-right:1rem;
-        a {
-            img {
-                max-width:40px;
-            }
-            p {
-                font-size:1.2rem;
-                margin:0.25rem 0 0 0;
-            }
-            .andersen-post-adjacent-title {
-                font-size:1.6rem;
-            }
+           .andersen-header {
+            position: absolute;
+            .opacity(0);
         }
-    }
-}
 
-@media(max-width:480px){
     .andersen {
-        font-size: @font-size-base - 2;
-
-        h1 { font-size: @font-size-h1 - 2;}
-        h2 { font-size: @font-size-h2 - 2;}
-
-        .andersen-content-right{
+        &.home .andersen-sb {
+            position: absolute;
+            left:-10000px;
+        }
+        .andersen-menu-toggle {
+            visibility: visible;
+        }
+        .andersen-content-left {
+            width:100%;
+            position: static;
+            bottom: auto;
+        }
+        .page-template-template-sidebar-php .andersen-footer,
+        .andersen-footer {
+            padding-left: 0;
+        }
+        .andersen-content-right ,
+        .andersen-entry-content {
+            padding-left: 0;
+            padding-top:1rem;
 
         }
+        .andersen-front-listing,
+        .andersen-footer-text {
+            padding-left:1rem;
+            padding-right:1rem;
+        }
+
         .andersen-index-listing .andersen-indexpost-item {
             padding-top:3rem;
             margin-top: 2rem;
             margin-bottom: 2rem;
+
+            &:first-child {
+                margin-top: 0;
+                padding-top:1rem;
+            }
+        }
+        .andersen-brand-block .andersen-site-title {
+            z-index: 120;
+        }
+        .andersen-story-pager {
+            padding-left:1rem;
+            padding-right:1rem;
+            a {
+                img {
+                    max-width:40px;
+                }
+                p {
+                    font-size:1.2rem;
+                    margin:0.25rem 0 0 0;
+                }
+                .andersen-post-adjacent-title {
+                    font-size:1.6rem;
+                    clear:both;
+                    margin-top:0.5rem;
+                    padding-left:0;
+                    margin-left:0;
+                }
+            }
+        }
+        .andersen-post-adjacent.next img{
+            margin-bottom: 0.5rem;
         }
         .andersen-load-more-posts {
             margin-bottom: 2rem;
         }
         .aesop-story-highlights-shortcode {
             padding-left:0;
-        }
-        .andersen-load-more-posts,
-        .andersen-indexpost-entry-title,
-        .andersen-indexpost-meta,
-        .andersen-post-meta {
-            padding-left: 0;
-            paddign-right:0;
         }
 
         .andersen-post-meta .andersen-cat-links, 
@@ -123,14 +124,21 @@
         ol.commentlist li.comment {
             padding:0;
         }
-        .andersen-story-pager .andersen-post-adjacent-title {
-            clear:both;
-            margin-top:0.5rem;
+
+    }
+}
+
+@media(max-width:480px){
+    .andersen {
+        font-size: @font-size-base - 2;
+
+        h1 { font-size: @font-size-h1 - 2;}
+        h2 { font-size: @font-size-h2 - 2;}
+
+        .andersen-indexpost-item-inner {
             padding-left:0;
-            margin-left:0;
+            padding-right: 0;
         }
-        .andersen-post-adjacent.next img{
-            margin-bottom: 0.5rem;
-        }
+
     }
 }
