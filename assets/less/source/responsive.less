@@ -27,16 +27,28 @@
    }
 }
 @media(max-width:768px) {
+
+    .andersen.sb-menu-open {
+
+        .andersen-content-left {
+            left:0;
+            top:0;
+            bottom:0;
+            .opacity(1);
+            .box-shadow(inset 8px 0 -8px -8px rgba(0,0,0,1.0));
+        }
+    }
+
     .andersen-content-left,
     .andersen-header {
         .opacity(0);
     }
 
+    .andersen-header {
+        right:-@sb-width;
+    }
+
     .andersen {
-        &.home .andersen-sb {
-            //position: absolute;
-            //left:-10000px;
-        }
         .andersen-menu-toggle {
             visibility: visible;
             .andersen-btn-toggle;
@@ -52,6 +64,7 @@
         }
         .andersen-content-left {
             left:-@sb-width;
+            .transition(left .3s ease-in-out);
         }
         .page-template-template-sidebar-php .andersen-footer,
         .andersen-footer {
