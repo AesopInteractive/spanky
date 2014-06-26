@@ -5,7 +5,7 @@ class andersenFunctions {
 	function __construct(){
 
 		// Set some constants
-		define('ANDERSEN_THEME_VERSION', '1.0');
+		define('ANDERSEN_THEME_VERSION', '1.0.1');
 
 		define('ANDERSEN_THEME_DIR', get_template_directory());
 		define('ANDERSEN_THEME_URL', get_template_directory_uri());
